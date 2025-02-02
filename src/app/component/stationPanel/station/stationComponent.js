@@ -2,13 +2,13 @@
 
 import { useDispatch, useSelector } from "react-redux";
 import "./stationComponent.css"
-import { setMeanTemp } from "@/lib/slice/meanTempSlicer";
+import { setMeanTemp } from "@/app/lib/slice/meanTempSlicer";
 import { useState } from "react";
 import MeanTempChart from "../../MeanTempChart/MeanTempChartComponent";
 
 /**
  * @typedef {Object} station
- * @property {import("@/lib/store").Metadata} station
+ * @property {import("@/app/lib/store").Metadata} station
  */
 
 

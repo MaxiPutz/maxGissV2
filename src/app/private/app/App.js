@@ -1,12 +1,12 @@
 "use client"
 
-import { setFilterMetadata, setMetadata } from "@/lib/slice/metadataSlice"
-import { useAppDispatch } from "../../../lib/hooks"
+import { setFilterMetadata, setMetadata } from "@/app/lib/slice/metadataSlice"
+import { useAppDispatch } from "../../lib/hooks"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
-import { setBearer } from "@/lib/slice/bearer"
+import { setBearer } from "@/app/lib/slice/bearer"
 import MapBoxComponent from "@/app/component/mapbox/mapBoxComponent"
-import { setEnv } from "@/lib/slice/envSlicer"
+import { setEnv } from "@/app/lib/slice/envSlicer"
 
 import "./app.css"
 import FilterComponent from "@/app/component/filter/filterComponent"

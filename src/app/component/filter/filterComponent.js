@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import MultiRangeSlider from "./multiRangeSlider/multiRangeSlider"
 import { useDispatch, useSelector } from "react-redux"
-import { setFilterMetadata } from "@/lib/slice/metadataSlice"
+import { setFilterMetadata } from "@/app/lib/slice/metadataSlice"
 
 
 import "./filterComponent.css"
@@ -11,7 +11,7 @@ import "./filterComponent.css"
 export default function FilterComponent() {
 
     /**
-     * @type {import("@/lib/store").Metadata[]}
+     * @type {import("@/app/lib/store").Metadata[]}
      */
     const metadata = useSelector(state => state.metadata.metadata)
     let filteredMetadata = metadata.map(ele => ele)

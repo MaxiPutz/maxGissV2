@@ -3,6 +3,7 @@ import { metadataSlice } from './slice/metadataSlice'
 import { bearerSlice } from './slice/bearer'
 import { envSlice } from './slice/envSlicer'
 import { meanTempSlicer } from './slice/meanTempSlicer'
+import { createWrapper } from 'next-redux-wrapper'
 
 /**
  * @typedef {Object} Metadata
@@ -28,3 +29,5 @@ export const makeStore = () => {
 
     })
 }
+
+export const wrapper = createWrapper(makeStore)

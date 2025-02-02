@@ -1,6 +1,6 @@
 "user client"
 
-import { useAppSelector } from "@/lib/hooks"
+import { useAppSelector } from "@/app/lib/hooks"
 import StationComponent from "./station/stationComponent"
 
 

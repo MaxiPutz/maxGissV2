@@ -9,7 +9,7 @@ import "./MeanTemp.css"
 export function MeantempPanelComponent() {
     const meanTempObj = useSelector(state => state.meanTemp )
     /**
-     * @type {import("@/lib/store").Metadata[]} 
+     * @type {import("@/app/lib/store").Metadata[]} 
      */
     const metadata = useSelector(state => state.metadata.metadata)
 

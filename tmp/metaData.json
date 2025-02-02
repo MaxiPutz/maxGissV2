@@ -1,0 +1,2396 @@
+[
+    {
+        "stationName": "Alert,N.W.T.",
+        "lat": 82.5,
+        "lng": -62.3,
+        "id": "403710820000",
+        "population": 10000,
+        "yearFrom": 1950,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Ostrov Kotel'",
+        "lat": 76,
+        "lng": 137.9,
+        "id": "222214320004",
+        "population": 10000,
+        "yearFrom": 1933,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Ostrov Vrange",
+        "lat": 71,
+        "lng": -178.5,
+        "id": "222219820000",
+        "population": 10000,
+        "yearFrom": 1926,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Anadyr'",
+        "lat": 64.8,
+        "lng": 177.6,
+        "id": "222255630007",
+        "population": 10000,
+        "yearFrom": 1898,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Adak/Navy",
+        "lat": 51.9,
+        "lng": -176.7,
+        "id": "425704540000",
+        "population": 10000,
+        "yearFrom": 1942,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Midway Island",
+        "lat": 28.2,
+        "lng": -177.4,
+        "id": "425910660000",
+        "population": 10000,
+        "yearFrom": 1921,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Johnston Isla",
+        "lat": 16.7,
+        "lng": -169.5,
+        "id": "530912750000",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 1984
+    },
+    {
+        "stationName": "Tarawa",
+        "lat": 1.4,
+        "lng": 172.9,
+        "id": "504916100002",
+        "population": 10000,
+        "yearFrom": 1950,
+        "yearTo": 1998
+    },
+    {
+        "stationName": "Funafuti",
+        "lat": -8.5,
+        "lng": 179.2,
+        "id": "518916430003",
+        "population": 10000,
+        "yearFrom": 1932,
+        "yearTo": 2010
+    },
+    {
+        "stationName": "Undu Point",
+        "lat": -16.1,
+        "lng": -180,
+        "id": "502916520000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Ono-I-Lau",
+        "lat": -20.7,
+        "lng": -178.7,
+        "id": "502916990000",
+        "population": 10000,
+        "yearFrom": 1943,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Raoul Island,",
+        "lat": -29.2,
+        "lng": -177.9,
+        "id": "507939940001",
+        "population": 10000,
+        "yearFrom": 1940,
+        "yearTo": 1998
+    },
+    {
+        "stationName": "Chatham Islan",
+        "lat": -44,
+        "lng": -176.6,
+        "id": "507939870000",
+        "population": 10000,
+        "yearFrom": 1880,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Campbell Isla",
+        "lat": -52.5,
+        "lng": 169.2,
+        "id": "507939450007",
+        "population": 10000,
+        "yearFrom": 1941,
+        "yearTo": 2002
+    },
+    {
+        "stationName": "Terra_nova_bay",
+        "lat": -74.7,
+        "lng": 164.1,
+        "id": "700896620008",
+        "population": 10000,
+        "yearFrom": 1987,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Barrow/W. Pos",
+        "lat": 71.3,
+        "lng": -156.8,
+        "id": "425700260000",
+        "population": 10000,
+        "yearFrom": 1901,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Bethel/Bethel",
+        "lat": 60.8,
+        "lng": -161.8,
+        "id": "425702190000",
+        "population": 10000,
+        "yearFrom": 1923,
+        "yearTo": 2004
+    },
+    {
+        "stationName": "Dutch Harbour Alaska",
+        "lat": 53.9,
+        "lng": -166.5,
+        "id": "425704820010",
+        "population": 10000,
+        "yearFrom": 1880,
+        "yearTo": 1984
+    },
+    {
+        "stationName": "Barking Sands",
+        "lat": 22,
+        "lng": -159.8,
+        "id": "425911620010",
+        "population": 10000,
+        "yearFrom": 1968,
+        "yearTo": 2003
+    },
+    {
+        "stationName": "Fanning Islan",
+        "lat": 3.9,
+        "lng": -159.4,
+        "id": "504914870000",
+        "population": 10000,
+        "yearFrom": 1922,
+        "yearTo": 1980
+    },
+    {
+        "stationName": "Rakahanga",
+        "lat": -10.1,
+        "lng": -161.1,
+        "id": "525918040000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Pukapuka",
+        "lat": -10.9,
+        "lng": -165.8,
+        "id": "525918110000",
+        "population": 10000,
+        "yearFrom": 1932,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Rarotonga",
+        "lat": -21.2,
+        "lng": -159.8,
+        "id": "525918430007",
+        "population": 10000,
+        "yearFrom": 1906,
+        "yearTo": 2004
+    },
+    {
+        "stationName": "Gill",
+        "lat": -80,
+        "lng": -178.6,
+        "id": "700893760009",
+        "population": 10000,
+        "yearFrom": 1985,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Mould Bay, N.",
+        "lat": 76.2,
+        "lng": -119.3,
+        "id": "403710720006",
+        "population": 10000,
+        "yearFrom": 1948,
+        "yearTo": 1997
+    },
+    {
+        "stationName": "Barter Island",
+        "lat": 70.1,
+        "lng": -143.6,
+        "id": "425700860000",
+        "population": 10000,
+        "yearFrom": 1947,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Valdez",
+        "lat": 61.1,
+        "lng": -146.3,
+        "id": "425702750001",
+        "population": 10000,
+        "yearFrom": 1909,
+        "yearTo": 2004
+    },
+    {
+        "stationName": "Ship P",
+        "lat": 50,
+        "lng": -145,
+        "id": "800999120010",
+        "population": 10000,
+        "yearFrom": 1945,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Ship N",
+        "lat": 30,
+        "lng": -140,
+        "id": "800999110010",
+        "population": 10000,
+        "yearFrom": 1947,
+        "yearTo": 1974
+    },
+    {
+        "stationName": "Hilo/Gen. Lym",
+        "lat": 19.7,
+        "lng": -155.1,
+        "id": "425912850000",
+        "population": 38000,
+        "yearFrom": 1905,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Atuona",
+        "lat": -9.8,
+        "lng": -139,
+        "id": "528919250000",
+        "population": 10000,
+        "yearFrom": 1959,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Takaroa",
+        "lat": -14.5,
+        "lng": -145,
+        "id": "528919430000",
+        "population": 10000,
+        "yearFrom": 1952,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Tubuai",
+        "lat": -23.4,
+        "lng": -149.5,
+        "id": "528919540000",
+        "population": 10000,
+        "yearFrom": 1966,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Rapa",
+        "lat": -27.6,
+        "lng": -144.3,
+        "id": "528919580007",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Byrd Station",
+        "lat": -80,
+        "lng": -119.5,
+        "id": "700891250000",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 1987
+    },
+    {
+        "stationName": "Nicholson Peninsula,Nw",
+        "lat": 69.9,
+        "lng": -129,
+        "id": "403719480020",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Tungsten,Nw",
+        "lat": 62,
+        "lng": -128.2,
+        "id": "403719530040",
+        "population": 10000,
+        "yearFrom": 1966,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Mcinnes Is.,B",
+        "lat": 52.3,
+        "lng": -128.7,
+        "id": "403718970000",
+        "population": 10000,
+        "yearFrom": 1954,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Brookings 2se",
+        "lat": 42,
+        "lng": -124.2,
+        "id": "425725970030",
+        "population": 10000,
+        "yearFrom": 1913,
+        "yearTo": 2002
+    },
+    {
+        "stationName": "Santa Cruz",
+        "lat": 37,
+        "lng": -122,
+        "id": "425724910040",
+        "population": 50000,
+        "yearFrom": 1895,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Puka-Puka, Tuamotu Is.",
+        "lat": -14.8,
+        "lng": -138.8,
+        "id": "528919440010",
+        "population": 10000,
+        "yearFrom": 1966,
+        "yearTo": 1986
+    },
+    {
+        "stationName": "Pitcairn",
+        "lat": -25.1,
+        "lng": -130.1,
+        "id": "537919600000",
+        "population": 10000,
+        "yearFrom": 1940,
+        "yearTo": 1984
+    },
+    {
+        "stationName": "Byrd",
+        "lat": -80,
+        "lng": -119.4,
+        "id": "700893240009",
+        "population": 10000,
+        "yearFrom": 1980,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Isachsen,Nw",
+        "lat": 78.8,
+        "lng": -103.5,
+        "id": "403719170010",
+        "population": 10000,
+        "yearFrom": 1948,
+        "yearTo": 1978
+    },
+    {
+        "stationName": "Holman,Nw",
+        "lat": 70.7,
+        "lng": -117.8,
+        "id": "403719480030",
+        "population": 10000,
+        "yearFrom": 1941,
+        "yearTo": 1969
+    },
+    {
+        "stationName": "Fort Resolution,Nw",
+        "lat": 61.2,
+        "lng": -113.7,
+        "id": "403719350020",
+        "population": 10000,
+        "yearFrom": 1911,
+        "yearTo": 1936
+    },
+    {
+        "stationName": "Coronation A,Al",
+        "lat": 52.1,
+        "lng": -111.5,
+        "id": "403718710010",
+        "population": 10000,
+        "yearFrom": 1944,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Grace",
+        "lat": 42.6,
+        "lng": -111.7,
+        "id": "425725780040",
+        "population": 10000,
+        "yearFrom": 1907,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Sacaton",
+        "lat": 33.1,
+        "lng": -111.8,
+        "id": "425722780010",
+        "population": 10000,
+        "yearFrom": 1908,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "La Paz, B.C.S",
+        "lat": 24.3,
+        "lng": -110.4,
+        "id": "414764050000",
+        "population": 46000,
+        "yearFrom": 1933,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Manzanillo,Co",
+        "lat": 19.1,
+        "lng": -104.3,
+        "id": "414766540000",
+        "population": 21000,
+        "yearFrom": 1921,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Is. De Pascua",
+        "lat": -27.1,
+        "lng": -109.4,
+        "id": "304854690004",
+        "population": 10000,
+        "yearFrom": 1942,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Eureka,N.W.T.",
+        "lat": 80,
+        "lng": -85.9,
+        "id": "403719170006",
+        "population": 10000,
+        "yearFrom": 1947,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Shepherd Bay,",
+        "lat": 68.8,
+        "lng": -93.4,
+        "id": "403719110000",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Chesterfield,Nw",
+        "lat": 63.3,
+        "lng": -90.7,
+        "id": "403710830010",
+        "population": 10000,
+        "yearFrom": 1930,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Red Lake,Ont.",
+        "lat": 51.1,
+        "lng": -93.8,
+        "id": "403718540000",
+        "population": 10000,
+        "yearFrom": 1930,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Rockwell City",
+        "lat": 42.4,
+        "lng": -94.6,
+        "id": "425725490010",
+        "population": 10000,
+        "yearFrom": 1895,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Marshall",
+        "lat": 32.5,
+        "lng": -94.3,
+        "id": "425722470010",
+        "population": 24000,
+        "yearFrom": 1895,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Tampico, Tamp",
+        "lat": 22.2,
+        "lng": -97.8,
+        "id": "414765480000",
+        "population": 212000,
+        "yearFrom": 1949,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Tapachula, Ch",
+        "lat": 14.9,
+        "lng": -92.3,
+        "id": "414769030000",
+        "population": 60000,
+        "yearFrom": 1949,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "San Cristobal",
+        "lat": -0.9,
+        "lng": -89.6,
+        "id": "306840080000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Base San Martin",
+        "lat": -68.1,
+        "lng": -67.1,
+        "id": "700890660004",
+        "population": 10000,
+        "yearFrom": 1976,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Pond Inlet,Nw",
+        "lat": 72.7,
+        "lng": -78,
+        "id": "403710950010",
+        "population": 10000,
+        "yearFrom": 1922,
+        "yearTo": 1960
+    },
+    {
+        "stationName": "Nottingham Island,Nw",
+        "lat": 63.1,
+        "lng": -77.9,
+        "id": "403719100010",
+        "population": 10000,
+        "yearFrom": 1927,
+        "yearTo": 1970
+    },
+    {
+        "stationName": "Eastmain,Qu",
+        "lat": 52.2,
+        "lng": -78.5,
+        "id": "403718270010",
+        "population": 10000,
+        "yearFrom": 1960,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Bath",
+        "lat": 42.4,
+        "lng": -77.3,
+        "id": "425725230040",
+        "population": 10000,
+        "yearFrom": 1890,
+        "yearTo": 2005
+    },
+    {
+        "stationName": "Southport 5n",
+        "lat": 34,
+        "lng": -78,
+        "id": "425746990010",
+        "population": 10000,
+        "yearFrom": 1895,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Nassau Airpor",
+        "lat": 25.1,
+        "lng": -77.5,
+        "id": "423780730003",
+        "population": 134000,
+        "yearFrom": 1880,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Cartagena/Raf",
+        "lat": 10.4,
+        "lng": -75.5,
+        "id": "305800220001",
+        "population": 293000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Cali/Calipuerto",
+        "lat": 3.4,
+        "lng": -76.4,
+        "id": "305802590000",
+        "population": 898000,
+        "yearFrom": 1961,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Moyobamba",
+        "lat": -6,
+        "lng": -77,
+        "id": "309844350010",
+        "population": 10000,
+        "yearFrom": 1958,
+        "yearTo": 1988
+    },
+    {
+        "stationName": "Pisco",
+        "lat": -13.8,
+        "lng": -76.3,
+        "id": "309846910004",
+        "population": 53000,
+        "yearFrom": 1949,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Antofagasta",
+        "lat": -23.4,
+        "lng": -70.4,
+        "id": "304854420003",
+        "population": 125000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Isla Juan Fernandez",
+        "lat": -33.7,
+        "lng": -79,
+        "id": "304855850006",
+        "population": 10000,
+        "yearFrom": 1901,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Isla Huafo",
+        "lat": -43.6,
+        "lng": -74.8,
+        "id": "304858340000",
+        "population": 10000,
+        "yearFrom": 1910,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Islotes Evang",
+        "lat": -52.4,
+        "lng": -75.1,
+        "id": "304859300000",
+        "population": 10000,
+        "yearFrom": 1901,
+        "yearTo": 1950
+    },
+    {
+        "stationName": "Faraday",
+        "lat": -65.2,
+        "lng": -64.3,
+        "id": "700890630008",
+        "population": 10000,
+        "yearFrom": 1944,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Upernavik",
+        "lat": 72.8,
+        "lng": -56.2,
+        "id": "431042100000",
+        "population": 10000,
+        "yearFrom": 1880,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Resolution Island Canada",
+        "lat": 61.6,
+        "lng": -64.7,
+        "id": "403719090020",
+        "population": 10000,
+        "yearFrom": 1929,
+        "yearTo": 1975
+    },
+    {
+        "stationName": "Riviere St Augustin,Qu",
+        "lat": 51.2,
+        "lng": -58.6,
+        "id": "403718080020",
+        "population": 10000,
+        "yearFrom": 1968,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Sable Island,",
+        "lat": 43.9,
+        "lng": -60,
+        "id": "403716000005",
+        "population": 10000,
+        "yearFrom": 1897,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Bermuda Naval",
+        "lat": 32.4,
+        "lng": -64.7,
+        "id": "427780160000",
+        "population": 10000,
+        "yearFrom": 1931,
+        "yearTo": 1995
+    },
+    {
+        "stationName": "Juliana Airpo",
+        "lat": 18.1,
+        "lng": -63.1,
+        "id": "434788660000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Codrington          Barbados",
+        "lat": 13.1,
+        "lng": -59.6,
+        "id": "401789550010",
+        "population": 70000,
+        "yearFrom": 1880,
+        "yearTo": 1980
+    },
+    {
+        "stationName": "Santa Elena D",
+        "lat": 4.6,
+        "lng": -61.1,
+        "id": "314804620000",
+        "population": 10000,
+        "yearFrom": 1941,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Manaus",
+        "lat": -3.1,
+        "lng": -60,
+        "id": "303823310004",
+        "population": 613000,
+        "yearFrom": 1910,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "San Ignacio D",
+        "lat": -16.4,
+        "lng": -61,
+        "id": "302852070000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Las Lomitas",
+        "lat": -24.7,
+        "lng": -60.6,
+        "id": "301870780003",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Rosario Aero",
+        "lat": -32.9,
+        "lng": -60.8,
+        "id": "301874800003",
+        "population": 955000,
+        "yearFrom": 1941,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Viedma Aero",
+        "lat": -40.9,
+        "lng": -63,
+        "id": "301877910002",
+        "population": 24000,
+        "yearFrom": 1971,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Stanley /Uk/",
+        "lat": -51.7,
+        "lng": -57.9,
+        "id": "316888900010",
+        "population": 10000,
+        "yearFrom": 1922,
+        "yearTo": 1988
+    },
+    {
+        "stationName": "Base Arturo P",
+        "lat": -62.5,
+        "lng": -59.7,
+        "id": "304890570008",
+        "population": 10000,
+        "yearFrom": 1966,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Butler_island",
+        "lat": -72.2,
+        "lng": -60.2,
+        "id": "700892660009",
+        "population": 10000,
+        "yearFrom": 1986,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Jakobshavn",
+        "lat": 69.2,
+        "lng": -51.1,
+        "id": "431042210000",
+        "population": 10000,
+        "yearFrom": 1880,
+        "yearTo": 1980
+    },
+    {
+        "stationName": "Prins Christi",
+        "lat": 60,
+        "lng": -43.2,
+        "id": "431043900000",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Ship C",
+        "lat": 52.8,
+        "lng": -35.5,
+        "id": "800999030010",
+        "population": 10000,
+        "yearFrom": 1945,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Ship D",
+        "lat": 44,
+        "lng": -41,
+        "id": "800999040010",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 1973
+    },
+    {
+        "stationName": "Ship E",
+        "lat": 35,
+        "lng": -48,
+        "id": "800999050010",
+        "population": 10000,
+        "yearFrom": 1945,
+        "yearTo": 1973
+    },
+    {
+        "stationName": "Turiacu",
+        "lat": -1.7,
+        "lng": -45.4,
+        "id": "303821980000",
+        "population": 10000,
+        "yearFrom": 1911,
+        "yearTo": 1963
+    },
+    {
+        "stationName": "Teresina",
+        "lat": -5.1,
+        "lng": -42.8,
+        "id": "303825780001",
+        "population": 339000,
+        "yearFrom": 1988,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Caetite",
+        "lat": -14.1,
+        "lng": -42.6,
+        "id": "303833390000",
+        "population": 10000,
+        "yearFrom": 1931,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Rio De Janeir",
+        "lat": -22.9,
+        "lng": -43.2,
+        "id": "303837430000",
+        "population": null,
+        "yearFrom": 1880,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Florianopolis",
+        "lat": -27.6,
+        "lng": -48.6,
+        "id": "303838970003",
+        "population": 154000,
+        "yearFrom": 1961,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Grytviken,",
+        "lat": -54.3,
+        "lng": -36.5,
+        "id": "317889030008",
+        "population": 10000,
+        "yearFrom": 1905,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Base Orcadas",
+        "lat": -60.8,
+        "lng": -44.7,
+        "id": "701889680005",
+        "population": 10000,
+        "yearFrom": 1903,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Nord Ads",
+        "lat": 81.6,
+        "lng": -16.7,
+        "id": "431043120000",
+        "population": 10000,
+        "yearFrom": 1952,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Kap Tobin",
+        "lat": 70.4,
+        "lng": -22,
+        "id": "431043390010",
+        "population": 10000,
+        "yearFrom": 1931,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Keflavikurflu",
+        "lat": 64,
+        "lng": -22.6,
+        "id": "620040180005",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Ship J",
+        "lat": 52.5,
+        "lng": -20,
+        "id": "800999070010",
+        "population": 10000,
+        "yearFrom": 1948,
+        "yearTo": 1975
+    },
+    {
+        "stationName": "Lajes (Acores",
+        "lat": 38.8,
+        "lng": -27.1,
+        "id": "636085090000",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Santa Maria (",
+        "lat": 37,
+        "lng": -25.2,
+        "id": "636085150004",
+        "population": 10000,
+        "yearFrom": 1961,
+        "yearTo": 2005
+    },
+    {
+        "stationName": "Mindelo",
+        "lat": 16.9,
+        "lng": -25,
+        "id": "108085830000",
+        "population": 10000,
+        "yearFrom": 1884,
+        "yearTo": 1961
+    },
+    {
+        "stationName": "Praia",
+        "lat": 14.9,
+        "lng": -23.5,
+        "id": "108085890000",
+        "population": 10000,
+        "yearFrom": 1921,
+        "yearTo": 1960
+    },
+    {
+        "stationName": "Natal Aeropor",
+        "lat": -5.9,
+        "lng": -35.2,
+        "id": "303825990000",
+        "population": 377000,
+        "yearFrom": 1958,
+        "yearTo": 1988
+    },
+    {
+        "stationName": "Trindade (Ilh",
+        "lat": -20.5,
+        "lng": -29.3,
+        "id": "303836500001",
+        "population": 10000,
+        "yearFrom": 1967,
+        "yearTo": 2000
+    },
+    {
+        "stationName": "Halley",
+        "lat": -75.5,
+        "lng": -26.6,
+        "id": "700890220008",
+        "population": 10000,
+        "yearFrom": 1956,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Jan Mayen",
+        "lat": 70.9,
+        "lng": -8.7,
+        "id": "634010010003",
+        "population": 10000,
+        "yearFrom": 1921,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Thorshavn",
+        "lat": 62,
+        "lng": -6.8,
+        "id": "652060110003",
+        "population": 12000,
+        "yearFrom": 1880,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Cork Airport",
+        "lat": 51.9,
+        "lng": -8.5,
+        "id": "621039550004",
+        "population": 134000,
+        "yearFrom": 1949,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Viana Do Cast",
+        "lat": 41.7,
+        "lng": -8.8,
+        "id": "636085430000",
+        "population": 13000,
+        "yearFrom": 1961,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Casablanca",
+        "lat": 33.6,
+        "lng": -7.7,
+        "id": "130601550003",
+        "population": null,
+        "yearFrom": 1924,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Bir Moghrein",
+        "lat": 25.2,
+        "lng": -11.6,
+        "id": "128614010000",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Kita",
+        "lat": 13.1,
+        "lng": -9.5,
+        "id": "127612700000",
+        "population": 18000,
+        "yearFrom": 1955,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Tabou",
+        "lat": 4.4,
+        "lng": -7.4,
+        "id": "113655920000",
+        "population": 10000,
+        "yearFrom": 1941,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Wide Awake Fi",
+        "lat": -8,
+        "lng": -14.4,
+        "id": "158619020000",
+        "population": 10000,
+        "yearFrom": 1923,
+        "yearTo": 1980
+    },
+    {
+        "stationName": "St. Helena Is.",
+        "lat": -16,
+        "lng": -5.7,
+        "id": "147619010000",
+        "population": 10000,
+        "yearFrom": 1892,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Tristan Da Cunha",
+        "lat": -37,
+        "lng": -12.3,
+        "id": "141689020000",
+        "population": 10000,
+        "yearFrom": 1942,
+        "yearTo": 1961
+    },
+    {
+        "stationName": "Gough Island",
+        "lat": -40.4,
+        "lng": -9.9,
+        "id": "141689060008",
+        "population": 10000,
+        "yearFrom": 1955,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Neumayer",
+        "lat": -70.7,
+        "lng": -8.2,
+        "id": "700890020008",
+        "population": 10000,
+        "yearFrom": 1981,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Svalbard Luft",
+        "lat": 78.2,
+        "lng": 15.5,
+        "id": "634010080002",
+        "population": 10000,
+        "yearFrom": 1977,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Andenes",
+        "lat": 69.3,
+        "lng": 16.2,
+        "id": "634010100010",
+        "population": 10000,
+        "yearFrom": 1880,
+        "yearTo": 1955
+    },
+    {
+        "stationName": "Fanaraken            Norway",
+        "lat": 61.5,
+        "lng": 7,
+        "id": "634013570010",
+        "population": 10000,
+        "yearFrom": 1932,
+        "yearTo": 1978
+    },
+    {
+        "stationName": "Guetersloh",
+        "lat": 51.9,
+        "lng": 8.3,
+        "id": "617103200000",
+        "population": 77000,
+        "yearFrom": 1880,
+        "yearTo": 1920
+    },
+    {
+        "stationName": "Ajaccio",
+        "lat": 41.9,
+        "lng": 8.8,
+        "id": "615077610003",
+        "population": 47000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Gafsa",
+        "lat": 34.4,
+        "lng": 8.8,
+        "id": "152607450000",
+        "population": 42000,
+        "yearFrom": 1964,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Djanet",
+        "lat": 24.6,
+        "lng": 9.5,
+        "id": "101606700001",
+        "population": 10000,
+        "yearFrom": 1965,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Zinder",
+        "lat": 13.8,
+        "lng": 9,
+        "id": "133610900003",
+        "population": 58000,
+        "yearFrom": 1941,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Calabar",
+        "lat": 5,
+        "lng": 8.3,
+        "id": "134652640000",
+        "population": 103000,
+        "yearFrom": 1909,
+        "yearTo": 1960
+    },
+    {
+        "stationName": "Mayumba",
+        "lat": -3.4,
+        "lng": 10.7,
+        "id": "118645030001",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Mocamedes",
+        "lat": -15.2,
+        "lng": 12.2,
+        "id": "102664220000",
+        "population": 12000,
+        "yearFrom": 1941,
+        "yearTo": 1985
+    },
+    {
+        "stationName": "Luderitz(Diaz",
+        "lat": -26.6,
+        "lng": 15.1,
+        "id": "132683000000",
+        "population": 10000,
+        "yearFrom": 1960,
+        "yearTo": 1986
+    },
+    {
+        "stationName": "Cape Columbin",
+        "lat": -32.8,
+        "lng": 17.9,
+        "id": "141687120000",
+        "population": 10000,
+        "yearFrom": 1960,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Novolazarevsk",
+        "lat": -70.8,
+        "lng": 11.8,
+        "id": "700895120008",
+        "population": 10000,
+        "yearFrom": 1961,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Gjesvar             Norway",
+        "lat": 71.1,
+        "lng": 25.4,
+        "id": "634010680010",
+        "population": 10000,
+        "yearFrom": 1880,
+        "yearTo": 1926
+    },
+    {
+        "stationName": "Jyvaskyla",
+        "lat": 62.4,
+        "lng": 25.7,
+        "id": "614029350003",
+        "population": 10000,
+        "yearFrom": 1950,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Brest",
+        "lat": 52.1,
+        "lng": 23.7,
+        "id": "605330080000",
+        "population": 177000,
+        "yearFrom": 1888,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Botev Vrah",
+        "lat": 42.7,
+        "lng": 24.8,
+        "id": "608156270000",
+        "population": 10000,
+        "yearFrom": 1946,
+        "yearTo": 1988
+    },
+    {
+        "stationName": "Salloum",
+        "lat": 31.5,
+        "lng": 25.2,
+        "id": "115623000000",
+        "population": 10000,
+        "yearFrom": 1919,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Kufra",
+        "lat": 24.2,
+        "lng": 23.3,
+        "id": "124622710000",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "El Fasher",
+        "lat": 13.6,
+        "lng": 25.3,
+        "id": "148627600000",
+        "population": 52000,
+        "yearFrom": 1918,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Obo",
+        "lat": 5.4,
+        "lng": 26.5,
+        "id": "109646590000",
+        "population": 10000,
+        "yearFrom": 1955,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Kindu",
+        "lat": -3,
+        "lng": 25.9,
+        "id": "154641550000",
+        "population": 10000,
+        "yearFrom": 1950,
+        "yearTo": 1983
+    },
+    {
+        "stationName": "Mongu",
+        "lat": -15.2,
+        "lng": 23.1,
+        "id": "155676330003",
+        "population": 10000,
+        "yearFrom": 1923,
+        "yearTo": 2010
+    },
+    {
+        "stationName": "Gaborone",
+        "lat": -24.7,
+        "lng": 25.9,
+        "id": "104682440000",
+        "population": 21000,
+        "yearFrom": 1926,
+        "yearTo": 1970
+    },
+    {
+        "stationName": "Uitenhage - Pur",
+        "lat": -33.8,
+        "lng": 25.4,
+        "id": "141688420010",
+        "population": 71000,
+        "yearFrom": 1960,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Cape St. Fran",
+        "lat": -34.2,
+        "lng": 24.8,
+        "id": "141689380000",
+        "population": 10000,
+        "yearFrom": 1960,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Marion Island",
+        "lat": -46.9,
+        "lng": 37.9,
+        "id": "141689940008",
+        "population": 10000,
+        "yearFrom": 1948,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Syowa",
+        "lat": -69,
+        "lng": 39.6,
+        "id": "700895320008",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Gmo Im.E.T.",
+        "lat": 80.6,
+        "lng": 58,
+        "id": "222200460003",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Kanin Nos",
+        "lat": 68.7,
+        "lng": 43.3,
+        "id": "638221650004",
+        "population": 10000,
+        "yearFrom": 1915,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Njandoma",
+        "lat": 61.7,
+        "lng": 40.2,
+        "id": "638228540000",
+        "population": 23000,
+        "yearFrom": 1951,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Tambov",
+        "lat": 52.8,
+        "lng": 41.3,
+        "id": "638279470000",
+        "population": 270000,
+        "yearFrom": 1880,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Samtredia",
+        "lat": 42.2,
+        "lng": 42.4,
+        "id": "616373850000",
+        "population": 30000,
+        "yearFrom": 1936,
+        "yearTo": 1989
+    },
+    {
+        "stationName": "Habbaniya Iraq",
+        "lat": 33.4,
+        "lng": 43.6,
+        "id": "209406500010",
+        "population": 14000,
+        "yearFrom": 1937,
+        "yearTo": 1969
+    },
+    {
+        "stationName": "Taif",
+        "lat": 21.5,
+        "lng": 40.5,
+        "id": "223410360002",
+        "population": 205000,
+        "yearFrom": 1987,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Djibouti",
+        "lat": 11.6,
+        "lng": 43.1,
+        "id": "114631250000",
+        "population": 96000,
+        "yearFrom": 1951,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Mandera",
+        "lat": 3.9,
+        "lng": 41.9,
+        "id": "122636240000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Pemba",
+        "lat": -5.1,
+        "lng": 39.7,
+        "id": "149638450010",
+        "population": 10000,
+        "yearFrom": 1899,
+        "yearTo": 1920
+    },
+    {
+        "stationName": "Lumbo",
+        "lat": -15,
+        "lng": 40.7,
+        "id": "131672410000",
+        "population": 20000,
+        "yearFrom": 1949,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Tulear",
+        "lat": -23.4,
+        "lng": 43.7,
+        "id": "125671610003",
+        "population": 46000,
+        "yearFrom": 1951,
+        "yearTo": 2005
+    },
+    {
+        "stationName": "Fort-Dauphin",
+        "lat": -25,
+        "lng": 47,
+        "id": "125671970000",
+        "population": 14000,
+        "yearFrom": 1941,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Molodeznaja",
+        "lat": -67.7,
+        "lng": 45.9,
+        "id": "700895420008",
+        "population": 10000,
+        "yearFrom": 1963,
+        "yearTo": 1999
+    },
+    {
+        "stationName": "Waigatz",
+        "lat": 70.4,
+        "lng": 58.8,
+        "id": "222230220010",
+        "population": 10000,
+        "yearFrom": 1914,
+        "yearTo": 1950
+    },
+    {
+        "stationName": "Ivdel'",
+        "lat": 60.7,
+        "lng": 60.5,
+        "id": "222239210000",
+        "population": 15000,
+        "yearFrom": 1934,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Adamovka",
+        "lat": 51.5,
+        "lng": 60,
+        "id": "222350410010",
+        "population": 10000,
+        "yearFrom": 1936,
+        "yearTo": 1988
+    },
+    {
+        "stationName": "Cimbaj",
+        "lat": 43,
+        "lng": 59.8,
+        "id": "231382620007",
+        "population": 19000,
+        "yearFrom": 1926,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Herat",
+        "lat": 34.2,
+        "lng": 62.2,
+        "id": "201409380000",
+        "population": 150000,
+        "yearFrom": 1961,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Seeb, Interna",
+        "lat": 23.6,
+        "lng": 58.3,
+        "id": "218412560001",
+        "population": 85000,
+        "yearFrom": 1982,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Salalah",
+        "lat": 17,
+        "lng": 54.1,
+        "id": "218413160002",
+        "population": 10000,
+        "yearFrom": 1942,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Seychelles In",
+        "lat": -4.7,
+        "lng": 55.5,
+        "id": "138639800002",
+        "population": 10000,
+        "yearFrom": 1894,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "St. Brandon",
+        "lat": -16.4,
+        "lng": 59.6,
+        "id": "129619860003",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Plaisance",
+        "lat": -20.4,
+        "lng": 57.7,
+        "id": "129619900003",
+        "population": 15000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Crozet",
+        "lat": -46.4,
+        "lng": 51.9,
+        "id": "143619970007",
+        "population": 10000,
+        "yearFrom": 1965,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Port-Aux-France, Kerguelen",
+        "lat": -49.4,
+        "lng": 70.2,
+        "id": "143619980007",
+        "population": 10000,
+        "yearFrom": 1950,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Mawson",
+        "lat": -67.6,
+        "lng": 62.9,
+        "id": "700895640008",
+        "population": 10000,
+        "yearFrom": 1954,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Ostrov Vize",
+        "lat": 79.5,
+        "lng": 77,
+        "id": "222200690003",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Mys Kamennyj",
+        "lat": 68.5,
+        "lng": 73.6,
+        "id": "222231460004",
+        "population": 10000,
+        "yearFrom": 1950,
+        "yearTo": 1994
+    },
+    {
+        "stationName": "Aleksandrovsk",
+        "lat": 60.4,
+        "lng": 77.9,
+        "id": "222239550000",
+        "population": 10000,
+        "yearFrom": 1932,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Irtyssk",
+        "lat": 53.4,
+        "lng": 75.5,
+        "id": "222298070000",
+        "population": 10000,
+        "yearFrom": 1935,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Almaty",
+        "lat": 43.2,
+        "lng": 76.9,
+        "id": "211368700006",
+        "population": 910000,
+        "yearFrom": 1881,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Leh",
+        "lat": 34.1,
+        "lng": 77.6,
+        "id": "207420340000",
+        "population": 10000,
+        "yearFrom": 1882,
+        "yearTo": 1968
+    },
+    {
+        "stationName": "Indore",
+        "lat": 22.7,
+        "lng": 75.8,
+        "id": "207427540002",
+        "population": 561000,
+        "yearFrom": 1880,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Bangalore",
+        "lat": 13,
+        "lng": 77.6,
+        "id": "207432950003",
+        "population": null,
+        "yearFrom": 1880,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Galle,Sri Lanka",
+        "lat": 6,
+        "lng": 80.2,
+        "id": "224434950010",
+        "population": 90000,
+        "yearFrom": 1880,
+        "yearTo": 1980
+    },
+    {
+        "stationName": "Diego Garcia",
+        "lat": -7.3,
+        "lng": 72.4,
+        "id": "161619670001",
+        "population": 10000,
+        "yearFrom": 1954,
+        "yearTo": 2002
+    },
+    {
+        "stationName": "Ile Nouvelle-Amsterdam",
+        "lat": -37.8,
+        "lng": 77.5,
+        "id": "157619960000",
+        "population": 10000,
+        "yearFrom": 1950,
+        "yearTo": 1998
+    },
+    {
+        "stationName": "Davis",
+        "lat": -68.6,
+        "lng": 78,
+        "id": "700895710008",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Zhongshan",
+        "lat": -69.4,
+        "lng": 76.4,
+        "id": "700895730008",
+        "population": 10000,
+        "yearFrom": 1989,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Hatanga",
+        "lat": 72,
+        "lng": 102.5,
+        "id": "222208910006",
+        "population": 10000,
+        "yearFrom": 1929,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Bajkit",
+        "lat": 61.7,
+        "lng": 96.4,
+        "id": "222238910000",
+        "population": 10000,
+        "yearFrom": 1934,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Minusinsk",
+        "lat": 53.7,
+        "lng": 91.7,
+        "id": "222298660008",
+        "population": 56000,
+        "yearFrom": 1886,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Hami",
+        "lat": 42.8,
+        "lng": 93.5,
+        "id": "205522030002",
+        "population": 55000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Sog Xian",
+        "lat": 31.9,
+        "lng": 93.8,
+        "id": "205561060000",
+        "population": 10000,
+        "yearFrom": 1956,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Silchar",
+        "lat": 24.8,
+        "lng": 92.8,
+        "id": "207426190000",
+        "population": 74000,
+        "yearFrom": 1880,
+        "yearTo": 1974
+    },
+    {
+        "stationName": "Rangoon",
+        "lat": 16.8,
+        "lng": 96.2,
+        "id": "216480970000",
+        "population": null,
+        "yearFrom": 1880,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Medan/Polonia",
+        "lat": 3.6,
+        "lng": 98.7,
+        "id": "503960350000",
+        "population": null,
+        "yearFrom": 1931,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Cocos Island",
+        "lat": -12.2,
+        "lng": 96.8,
+        "id": "524969960000",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Mirnyj",
+        "lat": -66.5,
+        "lng": 93,
+        "id": "700895920008",
+        "population": 10000,
+        "yearFrom": 1956,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Gmo Im.E.K. F",
+        "lat": 77.7,
+        "lng": 104.3,
+        "id": "222202920005",
+        "population": 10000,
+        "yearFrom": 1932,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Olenek",
+        "lat": 68.5,
+        "lng": 112.4,
+        "id": "222241250005",
+        "population": 10000,
+        "yearFrom": 1935,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Erbogacen",
+        "lat": 61.3,
+        "lng": 108,
+        "id": "222248170006",
+        "population": 10000,
+        "yearFrom": 1913,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Cita",
+        "lat": 52.1,
+        "lng": 113.5,
+        "id": "222307580008",
+        "population": 303000,
+        "yearFrom": 1890,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Mandal",
+        "lat": 42.5,
+        "lng": 110.1,
+        "id": "205531490000",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Yunxian",
+        "lat": 32.9,
+        "lng": 110.8,
+        "id": "205572590010",
+        "population": 30000,
+        "yearFrom": 1941,
+        "yearTo": 1988
+    },
+    {
+        "stationName": "Wuzhou",
+        "lat": 23.5,
+        "lng": 111.3,
+        "id": "205592650000",
+        "population": 10000,
+        "yearFrom": 1924,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Nha Trang",
+        "lat": 12.2,
+        "lng": 109.2,
+        "id": "232488770000",
+        "population": 216000,
+        "yearFrom": 1898,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Sibu",
+        "lat": 2.3,
+        "lng": 111.8,
+        "id": "505964210000",
+        "population": 52000,
+        "yearFrom": 1962,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Semarang/Ahma",
+        "lat": -7,
+        "lng": 110.4,
+        "id": "503968390000",
+        "population": null,
+        "yearFrom": 1960,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Christmas Isl",
+        "lat": -10.4,
+        "lng": 105.7,
+        "id": "523969950000",
+        "population": 10000,
+        "yearFrom": 1972,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Carnarvon Air",
+        "lat": -24.9,
+        "lng": 113.7,
+        "id": "501943000004",
+        "population": 10000,
+        "yearFrom": 1945,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Cape Naturali",
+        "lat": -33.5,
+        "lng": 115,
+        "id": "501946000007",
+        "population": 10000,
+        "yearFrom": 1904,
+        "yearTo": 2002
+    },
+    {
+        "stationName": "Cape Leeuwin",
+        "lat": -34.4,
+        "lng": 115.1,
+        "id": "501946010000",
+        "population": 10000,
+        "yearFrom": 1897,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Casey",
+        "lat": -66.3,
+        "lng": 110.5,
+        "id": "700896110008",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Gc41",
+        "lat": -71.6,
+        "lng": 111.3,
+        "id": "700898130009",
+        "population": 10000,
+        "yearFrom": 1984,
+        "yearTo": 2005
+    },
+    {
+        "stationName": "Dzardzan",
+        "lat": 68.7,
+        "lng": 124,
+        "id": "222241430002",
+        "population": 10000,
+        "yearFrom": 1936,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Jakutsk",
+        "lat": 62,
+        "lng": 129.7,
+        "id": "222249590007",
+        "population": 152000,
+        "yearFrom": 1882,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Huma",
+        "lat": 51.7,
+        "lng": 126.7,
+        "id": "205503530000",
+        "population": 10000,
+        "yearFrom": 1954,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Dunhua",
+        "lat": 43.4,
+        "lng": 128.2,
+        "id": "205541860000",
+        "population": 100000,
+        "yearFrom": 1931,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Fukue",
+        "lat": 32.7,
+        "lng": 128.8,
+        "id": "210478430000",
+        "population": 32000,
+        "yearFrom": 1962,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Naha",
+        "lat": 26.2,
+        "lng": 127.7,
+        "id": "210479360002",
+        "population": 295000,
+        "yearFrom": 1891,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Borongan",
+        "lat": 11.6,
+        "lng": 125.4,
+        "id": "509985530010",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 1975
+    },
+    {
+        "stationName": "Gen. Santos",
+        "lat": 6.1,
+        "lng": 125.2,
+        "id": "509988510000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Ambon/Pattimu",
+        "lat": -3.7,
+        "lng": 128.1,
+        "id": "503977240000",
+        "population": 209000,
+        "yearFrom": 1947,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Wyndham (Wyndham Port)  Was 00",
+        "lat": -15.5,
+        "lng": 128.1,
+        "id": "501942140010",
+        "population": 10000,
+        "yearFrom": 1898,
+        "yearTo": 1966
+    },
+    {
+        "stationName": "Giles",
+        "lat": -25,
+        "lng": 128.3,
+        "id": "501944610004",
+        "population": 10000,
+        "yearFrom": 1956,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Eucla Amo",
+        "lat": -31.7,
+        "lng": 128.9,
+        "id": "501946470000",
+        "population": 10000,
+        "yearFrom": 1926,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Cape Borda",
+        "lat": -35.8,
+        "lng": 136.6,
+        "id": "501948050000",
+        "population": 10000,
+        "yearFrom": 1925,
+        "yearTo": 1992
+    },
+    {
+        "stationName": "D_10",
+        "lat": -66.7,
+        "lng": 139.8,
+        "id": "700898320009",
+        "population": 10000,
+        "yearFrom": 1980,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Cokurdah",
+        "lat": 70.6,
+        "lng": 147.9,
+        "id": "222219460006",
+        "population": 10000,
+        "yearFrom": 1939,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Ojmjakon",
+        "lat": 63.2,
+        "lng": 143.2,
+        "id": "222246880006",
+        "population": 10000,
+        "yearFrom": 1930,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Aleksandrovsk",
+        "lat": 50.9,
+        "lng": 142.2,
+        "id": "222320610000",
+        "population": 20000,
+        "yearFrom": 1881,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Kushiro",
+        "lat": 43,
+        "lng": 144.4,
+        "id": "210474180000",
+        "population": 207000,
+        "yearFrom": 1910,
+        "yearTo": 1990
+    },
+    {
+        "stationName": "Choshi",
+        "lat": 35.7,
+        "lng": 140.9,
+        "id": "210476480002",
+        "population": 90000,
+        "yearFrom": 1887,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Titizima/Chichijima Pac I",
+        "lat": 27.1,
+        "lng": 142.2,
+        "id": "210479710000",
+        "population": 10000,
+        "yearFrom": 1907,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Andersen Afb,",
+        "lat": 13.6,
+        "lng": 144.9,
+        "id": "535912180000",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 1981
+    },
+    {
+        "stationName": "Momote M.O.",
+        "lat": -2.1,
+        "lng": 147.4,
+        "id": "508940440000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 1996
+    },
+    {
+        "stationName": "Madang M.O.",
+        "lat": -5.2,
+        "lng": 145.8,
+        "id": "508940140003",
+        "population": 21000,
+        "yearFrom": 1950,
+        "yearTo": 1994
+    },
+    {
+        "stationName": "Cooktown Amo",
+        "lat": -15.4,
+        "lng": 145.2,
+        "id": "501942830000",
+        "population": 10000,
+        "yearFrom": 1907,
+        "yearTo": 1987
+    },
+    {
+        "stationName": "Blackall",
+        "lat": -24.4,
+        "lng": 145.4,
+        "id": "501943510000",
+        "population": 10000,
+        "yearFrom": 1957,
+        "yearTo": 1992
+    },
+    {
+        "stationName": "Hillston Post Office",
+        "lat": -33.5,
+        "lng": 145.5,
+        "id": "501947000010",
+        "population": 10000,
+        "yearFrom": 1907,
+        "yearTo": 1992
+    },
+    {
+        "stationName": "Strathgordon",
+        "lat": -42.8,
+        "lng": 146.1,
+        "id": "501959530010",
+        "population": 10000,
+        "yearFrom": 1970,
+        "yearTo": 1992
+    },
+    {
+        "stationName": "Macquarie Isl",
+        "lat": -54.5,
+        "lng": 158.9,
+        "id": "501949980001",
+        "population": 10000,
+        "yearFrom": 1948,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Dumont D'Urvi",
+        "lat": -66.7,
+        "lng": 140,
+        "id": "700896420008",
+        "population": 10000,
+        "yearFrom": 1950,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Leningradskaya",
+        "lat": -69.5,
+        "lng": 159.4,
+        "id": "700896060018",
+        "population": 10000,
+        "yearFrom": 1971,
+        "yearTo": 1991
+    },
+    {
+        "stationName": "Ostrov Chetyr",
+        "lat": 70.6,
+        "lng": 162.5,
+        "id": "222219650003",
+        "population": 10000,
+        "yearFrom": 1933,
+        "yearTo": 1995
+    },
+    {
+        "stationName": "Kamenskoe",
+        "lat": 62.4,
+        "lng": 166.1,
+        "id": "222257440004",
+        "population": 10000,
+        "yearFrom": 1949,
+        "yearTo": 2010
+    },
+    {
+        "stationName": "Petropavlovsk",
+        "lat": 53,
+        "lng": 158.7,
+        "id": "222325830005",
+        "population": 215000,
+        "yearFrom": 1891,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Simusir",
+        "lat": 46.9,
+        "lng": 151.9,
+        "id": "222321950002",
+        "population": 10000,
+        "yearFrom": 1948,
+        "yearTo": 1997
+    },
+    {
+        "stationName": "Wake Island A",
+        "lat": 19.3,
+        "lng": 166.7,
+        "id": "539912450000",
+        "population": 10000,
+        "yearFrom": 1946,
+        "yearTo": 2009
+    },
+    {
+        "stationName": "Enewetak,Mars",
+        "lat": 11.3,
+        "lng": 162.3,
+        "id": "531912500000",
+        "population": 10000,
+        "yearFrom": 1945,
+        "yearTo": 1970
+    },
+    {
+        "stationName": "Lelu, Kosrae",
+        "lat": 5.3,
+        "lng": 163,
+        "id": "527913560000",
+        "population": 10000,
+        "yearFrom": 1954,
+        "yearTo": 1980
+    },
+    {
+        "stationName": "Auki",
+        "lat": -8.8,
+        "lng": 160.7,
+        "id": "512915070000",
+        "population": 10000,
+        "yearFrom": 1962,
+        "yearTo": 1986
+    },
+    {
+        "stationName": "Kira Kira",
+        "lat": -10.4,
+        "lng": 161.9,
+        "id": "512915270000",
+        "population": 10000,
+        "yearFrom": 1965,
+        "yearTo": 1986
+    },
+    {
+        "stationName": "Koumac",
+        "lat": -20.6,
+        "lng": 164.3,
+        "id": "532915770000",
+        "population": 10000,
+        "yearFrom": 1951,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Lord Howe Isl",
+        "lat": -31.5,
+        "lng": 159.1,
+        "id": "501949950001",
+        "population": 10000,
+        "yearFrom": 1912,
+        "yearTo": 2011
+    },
+    {
+        "stationName": "Invercargill",
+        "lat": -46.7,
+        "lng": 168.6,
+        "id": "507938440004",
+        "population": 49000,
+        "yearFrom": 1950,
+        "yearTo": 2010
+    }
+]

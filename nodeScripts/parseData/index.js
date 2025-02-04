@@ -1,6 +1,6 @@
-import fs from "fs"
+const fs = require("fs")
 
-const data = JSON.parse(fs.readFileSync("data.json").toString())
+const data = JSON.parse(fs.readFileSync("tmp/gridData.json").toString())
 .filter(ele => ele !== null)
 .reduce( (prev, row) => prev.find(ele => ele.id === row[6].trim() ) ? [...prev] : [...prev, ({
     stationName: row[2].trim(),  // Trim whitespace
@@ -24,4 +24,4 @@ function parseCoordinate(coord) {
     return value; // North & East remain positive
 }
 
-fs.writeFileSync("./tmp/metaData.json", JSON.stringify(data, undefined, 4))
+fs.writeFileSync("./tmp/metaDatav2.json", JSON.stringify(data, undefined, 4))

@@ -10,6 +10,10 @@ import StoreProvider from "@/app/StoreProvider";
 import { useSelector } from "react-redux";
 
 
+let myTrigger = undefined
+
+
+
 export default  function MapBoxComponent() {
 
   const mapRef = useRef()
@@ -23,7 +27,6 @@ export default  function MapBoxComponent() {
   const markersRef2 = useRef([]);
   
   useEffect(() => {
-    
     if (env.MAPBOX_KEY && !mapRef.current) {
       mapboxgl.accessToken = env.MAPBOX_KEY
       console.log(mapboxgl.accessToken);
@@ -46,17 +49,27 @@ export default  function MapBoxComponent() {
 
   useEffect(()=> {
     if (!mapRef) return
-    markersRef.current.forEach(marker => marker.remove());
-    markersRef.current = [];
 
-    metadata.forEach((station) => {
-        const marker = new mapboxgl.Marker()
-            .setLngLat([station.lng, station.lat])
-            .setPopup(new mapboxgl.Popup().setText(station.stationName)) // Add popup with name
-            .addTo(mapRef.current);
+    clearTimeout(myTrigger)
+    myTrigger = setTimeout(() => {
 
-        markersRef.current.push(marker); // Store marker reference
-    });
+   
+      markersRef.current.forEach(marker => marker.remove());
+      markersRef.current = [];
+  
+      metadata.forEach((station) => {
+          const marker = new mapboxgl.Marker({
+            
+          })
+              .setLngLat([station.lng, station.lat])
+              
+              .setPopup(new mapboxgl.Popup().setText(station.stationName)) // Add popup with name
+              .addTo(mapRef.current);
+  
+          markersRef.current.push(marker); // Store marker reference
+      });
+    }, 250) 
+
   }, [env, metadata])
 
   useEffect(()=> {
@@ -89,3 +102,20 @@ export default  function MapBoxComponent() {
 
 
 
+/**
+ * 
+ * @param {import("@/app/lib/store").Metadata} ele 
+ * @returns 
+ */
+function toFeature (ele) {
+  return {
+      'type': 'Feature',
+      'geometry': {
+          'type': 'Point',
+          'coordinates': [ele.lng, ele.lat]
+      },
+      'properties': {
+          'title': `${ele.stationName}`,
+      }
+  }
+}

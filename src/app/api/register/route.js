@@ -16,7 +16,7 @@ export async function POST(req) {
     // Convert request body
     /** @type {RegisterType} */
     const { email, password } = (await req.json());
-
+    
     console.log("Email:", email);
     console.log("Password:", password);
 

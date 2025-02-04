@@ -12,7 +12,7 @@ export default function StationPanelComponent() {
     return <>
         <div className="grid">
 
-            {metadata.map( (ele, i) => 
+            {metadata.slice(0, 50).map( (ele, i) => 
                 (<StationComponent key={i} station={ele} bearer={bearer}></StationComponent>))}
         </div>
     </>

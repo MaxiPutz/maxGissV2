@@ -7,8 +7,11 @@ import { setFilterMetadata } from "@/app/lib/slice/metadataSlice"
 
 
 import "./filterComponent.css"
+import ExponentialMultiRangeSlider from "./multiRangeSlider/multiRangeSliderExp"
 
 export default function FilterComponent() {
+
+    const [isYearfilterActive, setIsYearfilterActive ]= useState(false)
 
     /**
      * @type {import("@/app/lib/store").Metadata[]}
@@ -53,7 +56,8 @@ export default function FilterComponent() {
         filteredMetadata = filteredMetadata.filter(ele => ele.population<maxPop)
         console.log("chain",filteredMetadata.length);
 
-        filteredMetadata = filteredMetadata.filter(ele => ele.yearTo<=maxYear)
+        if (isYearfilterActive)
+        filteredMetadata = filteredMetadata.filter(ele => (ele.yearTo>=maxYear)) /// < here 
         console.log("end maxchain",filteredMetadata.length);
 
         
@@ -66,7 +70,8 @@ export default function FilterComponent() {
         filteredMetadata = filteredMetadata.filter(ele => ele.population>=minPop)
         console.log("chain",filteredMetadata.length);
 
-        filteredMetadata = filteredMetadata.filter(ele => ele.yearFrom>=minYear)
+        if (isYearfilterActive)
+        filteredMetadata = filteredMetadata.filter(ele => (ele.yearFrom<=minYear)) // < here 
         console.log("end minchain",filteredMetadata.length);
 
         dispatch(setFilterMetadata(filteredMetadata))
@@ -75,7 +80,7 @@ export default function FilterComponent() {
     useEffect(()=> {
 
         performFilter()
-    }, [stationName, minLat, maxLat, minLng, maxLng, minPop, maxPop, minYear, maxYear, metadata, dispatch]);
+    }, [isYearfilterActive, stationName, minLat, maxLat, minLng, maxLng, minPop, maxPop, minYear, maxYear, metadata, dispatch]);
 
   
 
@@ -129,11 +134,14 @@ export default function FilterComponent() {
     
           <div className="filter-group">
             <label>Population</label>
-            <MultiRangeSlider min={10000} max={1000000} onChange={({ min, max }) => setPop(min, max)} />
+       
+            <ExponentialMultiRangeSlider min={10000} max={10000000} onChange={({ min, max }) => setPop(min, max)} />
           </div>
     
           <div className="filter-group">
-            <label>Year</label>
+            <label>Year <input type="checkbox" checked={isYearfilterActive} onChange={(e)=> {
+              setIsYearfilterActive(!isYearfilterActive)} 
+              }/> (active) </label>
             <MultiRangeSlider min={1879} max={2024} onChange={({ min, max }) => setYear(min, max)} />
           </div>
         </div>

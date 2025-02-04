@@ -1,7 +1,21 @@
 import axios from "axios";
+/**
+ * for giss v2 raw
+ */
+const firstUrl = (id) => `https://data.giss.nasa.gov/cgi-bin/gistemp/stdata_show_v2.cgi?id=${id}&dt=1&ds=0`
+const url = (id) => `https://data.giss.nasa.gov/tmp/gistemp/STATIONS_v2/tmp_${id}_0_0/station.txt`
 
+/**
+ * for giss v2 raw after comninig source 
 const firstUrl = (id) => `https://data.giss.nasa.gov/cgi-bin/gistemp/stdata_show_v2.cgi?id=${id}&dt=1&ds=1`
 const url = (id) => `https://data.giss.nasa.gov/tmp/gistemp/STATIONS_v2/tmp_${id}_1_0/station.txt`
+*/
+
+/**
+ * for giss v2 raw after comninig cleaning/homogeneity 
+const firstUrl = (id) => `https://data.giss.nasa.gov/cgi-bin/gistemp/stdata_show_v2.cgi?id=${id}&dt=1&ds=2`
+const url = (id) => `https://data.giss.nasa.gov/tmp/gistemp/STATIONS_v2/tmp_${id}_2_0/station.txt`
+*/
 
 export async function POST (req) {
     const data = await req.json()

@@ -7,8 +7,8 @@ export const metadataSlice = createSlice({
     name: "metadata",
     /**
      * @type
-     * @param {import("../store").Metadata[]} metadata
-     * @param {import("../store").Metadata[]} filteredMetadata
+     * @param {Metadata[]} metadata
+     * @param {Metadata[]} filteredMetadata
      */
     initialState: {
         metadata: [],
@@ -16,8 +16,8 @@ export const metadataSlice = createSlice({
     },
     /**
      * 
-     * @param {import("../store").Metadata []} state 
-     * @param {import("@reduxjs/toolkit").PayloadAction<import("../store").Metadata[]>} action 
+     * @param {Metadata []} state 
+     * @param {Metadata[]>} action 
      */
     reducers: { 
         setMetadata: (state, action) => {

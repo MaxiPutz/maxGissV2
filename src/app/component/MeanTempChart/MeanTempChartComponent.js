@@ -30,12 +30,12 @@ ChartJS.register(
  * @param {Object} props
  * @param {Array<Object>} props.data - Array of data objects
  * @param {String} props.stationName - Name of the station
- *
+ * @param {String} prop.population
  * Each object in data should have the following properties:
  *   - YEAR: String or Number representing the year.
  *   - metANN: String or Number representing the mean temperature for that year.
  */
-const MeanTempChart = ({ data, stationName }) => {
+const MeanTempChart = ({ data, stationName, population }) => {
   // Filter out data with metANN values that are not valid (e.g. 999.9)
   const filteredData = data.filter((ele) => parseFloat(ele.metANN) < 120);
 
@@ -113,8 +113,8 @@ const MeanTempChart = ({ data, stationName }) => {
           marginBottom: "1rem",
         }}
       >
-        <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          {stationName}
+        <div style={{ fontSize: "1rem", fontWeight: "bold", margin:"0.5rem", marginLeft: "0.7rem" }}>
+           { `Population ${population}`  /*stationName*/}
         </div>
         <div>
           <label

@@ -11,7 +11,8 @@ import ExponentialMultiRangeSlider from "./multiRangeSlider/multiRangeSliderExp"
 
 export default function FilterComponent() {
 
-    const [isYearfilterActive, setIsYearfilterActive ]= useState(false)
+    const [isYearfilterActive, setIsYearfilterActive ]= useState(true)
+
 
     /**
      * @type {import("@/app/lib/store").Metadata[]}
@@ -147,7 +148,7 @@ export default function FilterComponent() {
             <label>Year <input type="checkbox" checked={isYearfilterActive} onChange={(e)=> {
               setIsYearfilterActive(!isYearfilterActive)} 
               }/> (active) </label>
-            <MultiRangeSlider min={1879} max={2024} onChange={({ min, max }) => setYear(min, max)} />
+            <MultiRangeSlider min={1879} max={2012} setMin={1880} setMax={2011}  onChange={({ min, max }) => setYear(min, max)} />
           </div>
         </div>
       );

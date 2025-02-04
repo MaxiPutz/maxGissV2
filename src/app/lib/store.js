@@ -5,6 +5,8 @@ import { envSlice } from './slice/envSlicer'
 import { meanTempSlicer } from './slice/meanTempSlicer'
 import { createWrapper } from 'next-redux-wrapper'
 
+
+
 /**
  * @typedef {Object} Metadata
  * @property {String} id
@@ -16,8 +18,6 @@ import { createWrapper } from 'next-redux-wrapper'
  * @property {Number} yearTo
  * 
 */
-
-
 export const makeStore = () => {
   return configureStore({
     reducer: {

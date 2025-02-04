@@ -20,6 +20,7 @@ export default function App() {
         const token = useSelector((state)=> state.bearer)
         const env = useSelector((state) => state.env)
     
+
         console.log("env from app", env);
         
         useEffect(()=> {

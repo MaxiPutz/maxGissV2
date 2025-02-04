@@ -4,9 +4,9 @@ import React, { useCallback, useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import "./multiRangeSlider.css";
 
-const MultiRangeSlider = ({ min, max, onChange }) => {
-  const [minVal, setMinVal] = useState(min);
-  const [maxVal, setMaxVal] = useState(max);
+const MultiRangeSlider = ({ min, max, onChange, setMin, setMax }) => {
+  const [minVal, setMinVal] = setMin ? useState(setMin) : useState(min);
+  const [maxVal, setMaxVal] =  setMax ? useState(setMax) :useState(max);
   const minValRef = useRef(min);
   const maxValRef = useRef(max);
   const range = useRef(null);
@@ -17,7 +17,6 @@ const MultiRangeSlider = ({ min, max, onChange }) => {
     [min, max]
   );
 
-  // Set width of the range to decrease from the left side
   useEffect(() => {
     const minPercent = getPercent(minVal);
     const maxPercent = getPercent(maxValRef.current);

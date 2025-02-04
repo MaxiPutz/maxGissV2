@@ -17,7 +17,12 @@ export default function FilterComponent() {
      * @type {import("@/app/lib/store").Metadata[]}
      */
     const metadata = useSelector(state => state.metadata.metadata)
+
+    console.log(metadata.filter(ele => ele.id === "603110350003"), "wien" );
+    
+
     let filteredMetadata = metadata.map(ele => ele)
+
 
     const dispatch = useDispatch()
 

@@ -6,7 +6,6 @@ import "./login.css"; // Ensure you create this CSS file
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
     return (
         <div className="login-container">
             <h2>Login to Access GISS Temperature Data</h2>

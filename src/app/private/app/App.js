@@ -12,12 +12,12 @@ import "./app.css"
 import FilterComponent from "@/app/component/filter/filterComponent"
 import StationPanelComponent from "@/app/component/stationPanel/stationpanelComponent"
 import { MeantempPanelComponent } from "@/app/component/MeanTempChart/MeanTempPanelComponent"
+import JSZip from "jszip"
 
 export default function App() {
 
         const dispatch = useDispatch()
         const token = useSelector((state)=> state.bearer)
-        const metadata = useSelector((state) => state.metadata)
         const env = useSelector((state) => state.env)
     
         console.log("env from app", env);
@@ -42,7 +42,9 @@ export default function App() {
                         Authorization: `Bearer ${token}`
                     }
                 }).then(ele => ele.json())
+             
                 .then(ele => {
+  
                     console.log(ele);
                     dispatch(
                     setEnv({
@@ -54,8 +56,14 @@ export default function App() {
                     headers:{
                         Authorization: `Bearer ${token}`
                     }
-                }).then(ele => ele.json())
+                }).then(ele => ele.blob())
+                .then(ele => JSZip.loadAsync(ele))
                 .then(ele => {
+                    const fileName = Object.keys(ele.files)[0]
+                    return ele.file(fileName).async("string")
+                })
+                .then(ele => {
+                    ele = JSON.parse(ele)
                     console.log("response", ele);
                     dispatch(setMetadata([
                         ...ele

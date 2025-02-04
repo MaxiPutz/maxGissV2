@@ -17,6 +17,7 @@
     "jose": "^5.9.6",
     "jsdom": "^26.0.0",
     "jsonwebtoken": "^9.0.2",
+    "jszip": "^3.10.1",
     "mapbox-gl": "^3.9.4",
     "next": "15.1.6",
     "next-redux-wrapper": "^8.1.0",

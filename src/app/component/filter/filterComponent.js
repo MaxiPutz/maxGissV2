@@ -140,7 +140,7 @@ export default function FilterComponent() {
           <div className="filter-group">
             <label>Population</label>
        
-            <ExponentialMultiRangeSlider min={10000} max={10000000} onChange={({ min, max }) => setPop(min, max)} />
+            <ExponentialMultiRangeSlider min={10000} max={100_000_000} onChange={({ min, max }) => setPop(min, max)} />
           </div>
     
           <div className="filter-group">

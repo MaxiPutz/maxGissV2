@@ -25,10 +25,23 @@ ChartJS.register(
 );
 
 /**
+ * @type {Record<StationDataVersion,string>}
+ */
+const colorMap = {
+  v2Combi: "rgba(54,162,235,1)",   // Blue
+  v2Raw: "rgba(255,99,132,1)",     // Red
+  v2Homogen: "rgba(75,192,192,1)", // Teal
+  v4Adj: "rgba(255,159,64,1)",     // Orange
+  v4Clean: "rgba(153,102,255,1)",  // Purple
+  v4Homogen: "rgba(255,206,86,1)", // Yellow
+  v4Raw: "rgba(0,200,83,1)"        // Green
+};
+
+/**
  * MeanTempChart Component
  *
  * @param {Object} props
- * @param {Array<Object>} props.data - Array of data objects
+ * @param {Record<StationDataVersion, StationData[]>} props.data - Array of data objects
  * @param {String} props.stationName - Name of the station
  * @param {String} prop.population
  * Each object in data should have the following properties:
@@ -37,10 +50,14 @@ ChartJS.register(
  */
 const MeanTempChart = ({ data, stationName, population }) => {
   // Filter out data with metANN values that are not valid (e.g. 999.9)
-  const filteredData = data.filter((ele) => parseFloat(ele.metANN) < 120);
 
-  const labels = filteredData.map((item) => item.YEAR);
-  const temperatures = filteredData.map((item) => parseFloat(item.metANN));
+  data = Object.entries(data).reduce( ( prev, [key, val] ) =>  ({
+    ...prev,
+    [key] : val.filter(ele => parseFloat(ele.metANN) <120 )
+  }) , {})
+
+  const labels = Object.values(data).reduce((prev, cur) => prev.length === 0 ? cur.map(ele => ele.YEAR) : prev, [])
+  
 
   // State for autoScale toggle
   const [autoScale, setAutoScale] = useState(false);
@@ -51,23 +68,37 @@ const MeanTempChart = ({ data, stationName, population }) => {
   };
 
   // If autoScale is enabled, compute min and max from the data; otherwise, use fixed values.
-  const yMin = autoScale ? Math.min(...temperatures) : -20;
-  const yMax = autoScale ? Math.max(...temperatures) : 20;
+  /**@type {number []} */
+  const numArr = Object.values(data).reduce((  prev, cur) => [...prev, ...cur.map(ele => parseFloat(ele.metANN))],[])
+  const yMin = autoScale ? Math.min(numArr) -0.5  : -20;
+  const yMax = autoScale ? Math.min(numArr) + 0.5 : 20
   // Optionally, compute a step size when autoscaling (here, simply divide the range by 5)
   const stepSize = autoScale ? (yMax - yMin) / 5 : 5;
 
   // Prepare data for Chart.js
+
+  const dataSets = Object.entries(data).map(([key, val]) => {
+    val = (val.filter(ele => parseFloat(ele.metANN) < 123) ).map(ele => ele.metANN)
+
+
+    return ( {
+      label: key,
+      data: val,
+      fill: false,
+      borderColor:  colorMap[key],
+      backgroundColor: colorMap[key].replace("1)", "0.4)"),
+      tension: 0.1,
+    })
+  })
+
+  console.log("dataSts", dataSets);
+  
+
+  
   const chartData = {
-    labels,
+    labels : labels,
     datasets: [
-      {
-        label: "Mean Temperature (°C)",
-        data: temperatures,
-        fill: false,
-        borderColor: "rgba(75,192,192,1)",
-        backgroundColor: "rgba(75,192,192,0.4)",
-        tension: 0.1,
-      },
+      ...dataSets,
     ],
   };
 
@@ -103,7 +134,7 @@ const MeanTempChart = ({ data, stationName, population }) => {
   };
 
   return (
-    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+    <div style={{ maxWidth: "800px", width:"85%", margin: "0 auto" }}>
       <div
         className="grid"
         style={{

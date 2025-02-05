@@ -9,7 +9,7 @@ export const meanTempSlicer = createSlice({
     initialState: {},
     reducers: {
         setMeanTemp: (state, action) => {
-            state[action.payload.id] = action.payload.data
+            state[action.payload.id] = { ...state[action.payload.id] ,...action.payload.data}
         }
     }
 })

@@ -34,11 +34,11 @@ export function MeantempPanelComponent() {
                     const md = metadata.find(ele => ele.id ===id)
                     const name = md.stationName
                     const population = md.population
-                    return <>
-                <CollapsComponent key={i}  header={name}  >
+                    return <div key={i}>
+                <CollapsComponent   header={name}  >
                     <MeanTempChart key={id} data={val}stationName={name} population={population}></MeanTempChart>
                 </CollapsComponent>
-                </> 
+                </div> 
                 }
                 )}
             </div>

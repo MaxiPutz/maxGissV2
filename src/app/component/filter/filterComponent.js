@@ -9,6 +9,8 @@ import { setFilterMetadata } from "@/app/lib/slice/metadataSlice"
 import "./filterComponent.css"
 import ExponentialMultiRangeSlider from "./multiRangeSlider/multiRangeSliderExp"
 
+
+
 export default function FilterComponent() {
 
     const [isYearfilterActive, setIsYearfilterActive ]= useState(true)

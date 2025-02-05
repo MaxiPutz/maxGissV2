@@ -1,9 +1,28 @@
+"use strict"
+
 import axios from "axios";
+
 /**
- * for giss v2 raw
+ * @typedef {"v2Raw" | "v2Combi" | "v2Homogen" | "v4Raw" | "v4Adj" | "v4Clean" | "v4Homogen" } StationDataVersion
  */
-const firstUrl = (id) => `https://data.giss.nasa.gov/cgi-bin/gistemp/stdata_show_v2.cgi?id=${id}&dt=1&ds=0`
-const url = (id) => `https://data.giss.nasa.gov/tmp/gistemp/STATIONS_v2/tmp_${id}_0_0/station.txt`
+
+/**
+ * @type {Record<StationDataVersion, number>} 
+*/
+const stationMap = {
+  v2Raw:0,
+  v2Combi:1,
+  v2Homogen: 2, 
+}
+
+/**
+ * 
+ * @param {string} id 
+ * @param {StationDataVersion} version
+ * @returns 
+ */
+const firstUrl = (id, version) => `https://data.giss.nasa.gov/cgi-bin/gistemp/stdata_show_v2.cgi?id=${id}&dt=1&ds=${stationMap[version]}`
+const url = (id, version) => `https://data.giss.nasa.gov/tmp/gistemp/STATIONS_v2/tmp_${id}_${stationMap[version]}_0/station.txt`
 
 /**
  * for giss v2 raw after comninig source 
@@ -23,20 +42,37 @@ export async function POST (req) {
     console.log(data);
 
 
-    const res = await fetchAndParse(data.id)
+    const res = (await Promise.all([ fetchAndParse(data.id, "v2Combi"),   fetchAndParse(data.id, "v2Raw"),  fetchAndParse(data.id, "v2Homogen")]))
+    .reduce((prev, /** @type {Record<StationDataVersion, StationData>} */ cur) => ({
+    ...prev,
+    ...cur
+  }),{})
+
+    console.log(Object.keys(res));
     
 
     return new Response( JSON.stringify( {data: res}))
 }
 
 
-async function fetchAndParse(id) {
-    try {
-      console.log(url(id));
-      
-      const trash = await axios.get(firstUrl(id))
+/**
+ * @param {String} id 
+ * @param {StationDataVersion} version
+ * @returns {Promise< Record<StationDataVersion, StationData>>}
+ */
 
-      const response = await axios.get(url(id));
+async function fetchAndParse(id, version) {
+    try {
+      console.log(version);
+      
+      console.log(firstUrl(id, version));
+      console.log(url(id, version));
+      
+      await new Promise((res) => setTimeout(()=> res(), 100))
+
+      const trash = await axios.get(firstUrl(id, version))
+
+      const response = await axios.get(url(id, version));
       const textData = response.data;
   
       const lines = textData.trim().split('\n');
@@ -63,10 +99,12 @@ async function fetchAndParse(id) {
           headers.forEach((header, index) => {
             record[header] = values[index];
           });
-          return record;
+          return record ;
         });
 
-      return result
+      return { 
+        [version] : result 
+      }
       console.log('Parsed data saved to station.json');
     } catch (error) {
       console.error('Error fetching or parsing the data:', error);

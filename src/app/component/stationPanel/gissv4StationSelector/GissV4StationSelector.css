@@ -1,0 +1,80 @@
+.gissSelectorPage { 
+    display: grid;
+    position: absolute;
+    top: 10vh;  /* Position slightly below the top */
+    left: 50%;  /* Center horizontally */
+    width: 75vw; /* 60% of the viewport width */
+    height: 80vh; /* 80% of the viewport height */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurred background */
+    transform: translate(-50%, -200%); /* Start hidden above the viewport */
+    transition: transform 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
+    z-index: 1000; /* Ensure it's above other elements */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+
+    grid-template-columns: 1fr 3fr;
+}
+
+
+.gissSelector {
+
+}
+
+.gissSelector:checked ~ .gissSelectorPage {
+    transform: translate(-50%, 0); /* Slide into view */
+}
+
+.stationTableContainer {
+    display: grid;
+    margin-top: 25px;
+
+}
+
+.stationHeader  {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+
+    font-weight: bold;
+    background: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.stationRow {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.stationRow div, .stationRow input {
+    display: grid;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+.searchArea {
+    background-color: black;
+    color: white;
+    border-radius: 4.5px;
+    margin: 24px;
+}
+
+
+.searchArea:hover {
+    cursor: pointer;
+}
+
+.searchArea:active {
+    transform: scale(0.98);
+}
+
+.toleft{
+    justify-self: flex-start;
+    margin-bottom: 25px;;
+}

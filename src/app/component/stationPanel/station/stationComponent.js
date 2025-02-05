@@ -5,6 +5,7 @@ import "./stationComponent.css"
 import { setMeanTemp } from "@/app/lib/slice/meanTempSlicer";
 import { useState } from "react";
 import MeanTempChart from "../../MeanTempChart/MeanTempChartComponent";
+import { GissV4StationSelector } from "../gissv4StationSelector/GissV4StationSelector";
 
 /**
  * @typedef {Object} station
@@ -26,6 +27,12 @@ export default function StationComponent ( {station, bearer}) {
     
     const data = useSelector(state => state.meanTemp[station.id])
 
+    /**
+     * @type {Metadata[]}
+     */
+    const metadataForDropDown = [{
+         id:"",lat:2,lng:1,population:10000,stationName:"teststation",yearFrom:1880, yearTo:1230
+    }]
 
     return <>
     <div>
@@ -56,6 +63,7 @@ export default function StationComponent ( {station, bearer}) {
             <p><strong>Longitude:</strong> {station.lng}</p>
             <p><strong>Population:</strong> {station.population}</p>
             <p><strong>Active From:</strong> {station.yearFrom} - {station.yearTo}</p>
+            <GissV4StationSelector gissV2Metadata={station}/>
         </div>
         </label>
 

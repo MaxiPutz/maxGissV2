@@ -46,6 +46,23 @@ export function GissV4StationSelector({gissV2Metadata}) {
         <input  onChange={ (e) => {
             const isChecked = e.target.checked
             if(isChecked) {
+                if(!stationData) {
+                    fetch("/api/private/nasa", {
+                        method: "POST",
+                        body: JSON.stringify({
+                            id : gissV2Metadata.id
+                        }),
+                        headers: {
+                            "Authentication": `Bearer ${token}`
+                        }
+                    }).then (ele => ele.json())
+                    .then(ele => {
+                        console.log(ele);
+                        dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele.data}))
+                        setIsLoading(false)
+                    })
+                }
+
                 fetch("/api/private/nasa/v4Stations", {
                     headers: {
                          Authorization: `Bearer ${token}`

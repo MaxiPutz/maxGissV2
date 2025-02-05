@@ -28,15 +28,13 @@ const url = (id, version) => `https://data.giss.nasa.gov/tmp/gistemp/STATIONS_v4
 export async function POST (req) {
 
     const data = await req.json()
-    console.log(data);
     
-    const res = (await Promise.all([ fetchAndParse(data.id, "v4Adj"), fetchAndParse(data.id, "v4Raw"), fetchAndParse(data.id, "v4Homogen"), fetchAndParse(data.id, "v4Clean")]))
+    const res = (await Promise.all([ await fetchAndParse(data.id, "v4Adj"),await fetchAndParse(data.id, "v4Raw"),await fetchAndParse(data.id, "v4Homogen"), fetchAndParse(data.id, "v4Clean")]))
     .reduce((prev, /** @type {Record<StationDataVersion, StationData>} */ cur) => ({
     ...prev,
     ...cur
   }),{})
 
-    console.log(Object.keys(res));
     
 
     return new Response( JSON.stringify( {data: res}))

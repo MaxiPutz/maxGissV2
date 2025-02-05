@@ -59,7 +59,6 @@ export function GissV4StationSelector({gissV2Metadata}) {
                     .then(ele => {
                         console.log(ele);
                         dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele.data}))
-                        setIsLoading(false)
                     })
                 }
 

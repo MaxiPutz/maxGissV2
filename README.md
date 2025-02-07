@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NASA Climate Data Viewer
 
-## Getting Started
+## Overview
 
-First, run the development server:
+NASA transitioned from GHCN v2 to GHCN v3.2 in 2011 and later to GHCN v4, shifting from its own data homogenization methods to NOAA/NCEI adjustments. This change introduced significant differences in how station data is processed, leading to variations between older and newer datasets. This platform enables users to compare historical and current temperature data, providing a clear and structured way to analyze these changes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Users can:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Select a weather station to view data from Version 2 (raw, combined homogenized).
+- View nearby weather stations for comparison.
+- Access and compare Version 4 data (adjusted, raw homogenized, and clean).
+- Apply filters based on population, year range, latitude, and longitude.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This website offers a more intuitive and efficient interface compared to NASA's official platform, making it easier to navigate and compare different data versions.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- **User Authentication**: Secure user registration and login.
+- **NASA Data Integration**: Fetches temperature data from NASA in real-time.
+- **Data Versioning**: Displays both Version 2 and Version 4 data for side-by-side analysis.
+- **Nearby Stations**: Lists additional weather stations in proximity for better regional comparison.
+- **Advanced Filtering**: Enables filtering by year, latitude, longitude, and population size.
+- **Optimized Interface**: Streamlined design for effortless data navigation and visualization.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js (for frontend and API handling)
+- Database (if authentication is handled via a database)
+- API key (if required for accessing NASA data)
 
-## Deploy on Vercel
+### Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/MaxiPutz/maxGissV2.git
+   cd maxGissV2

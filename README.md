@@ -3,6 +3,7 @@
 ## Overview
 
 NASA transitioned from GHCN v2 to GHCN v3.2 in 2011 and later to GHCN v4, shifting from its own data homogenization methods to NOAA/NCEI adjustments. This change introduced significant differences in how station data is processed, leading to variations between older and newer datasets. This platform enables users to compare historical and current temperature data, providing a clear and structured way to analyze these changes.
+![Screenshot 2025-02-07 at 11 06 29](https://github.com/user-attachments/assets/03bdf22d-b406-498d-be19-74a8446028ca)
 
 Users can:
 
@@ -12,6 +13,7 @@ Users can:
 - Apply filters based on population, year range, latitude, and longitude.
 
 This website offers a more intuitive and efficient interface compared to NASA's official platform, making it easier to navigate and compare different data versions.
+![Screenshot 2025-02-07 at 11 08 55](https://github.com/user-attachments/assets/c5853b87-ef31-4950-8a73-78bbae7abce6)
 
 ## Features
 

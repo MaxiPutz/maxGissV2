@@ -2,7 +2,9 @@
 
 ## Overview
 
-NASA transitioned from GHCN v2 to GHCN v3.2 in 2011 and later to GHCN v4, shifting from its own data homogenization methods to NOAA/NCEI adjustments. This change introduced significant differences in how station data is processed, leading to variations between older and newer datasets. This platform enables users to compare historical and current temperature data, providing a clear and structured way to analyze these changes.
+This platform enables users to compare historical and current temperature data
+
+NASA transitioned from GHCN v2 to GHCN v3.2 in 2011 and later to GHCN v4, shifting from its own data homogenization methods to NOAA/NCEI adjustments. This change introduced significant differences in how station data is processed, leading to variations between older and newer datasets
 
 ![Screenshot 2025-02-07 at 11 06 29](https://github.com/user-attachments/assets/03bdf22d-b406-498d-be19-74a8446028ca)
 

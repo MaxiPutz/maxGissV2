@@ -148,8 +148,10 @@ export function GissV4StationSelector({gissV2Metadata}) {
                     
                  )}
                 { 
-                stationData !== undefined ? 
-                 <MeanTempChart population={gissV2Metadata.population} data={stationData} stationName={gissV2Metadata.stationName}></MeanTempChart>
+                stationData !== undefined ? <label>
+                    <input onChange={()=> undefined} type="checknox" className="hide"/>
+                        <MeanTempChart population={gissV2Metadata.population} data={stationData} stationName={gissV2Metadata.stationName}></MeanTempChart>
+                 </label>
                 :
                 <></>
                 }

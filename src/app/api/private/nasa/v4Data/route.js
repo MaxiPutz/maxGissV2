@@ -28,7 +28,6 @@ const url = (id, version) => `https://data.giss.nasa.gov/tmp/gistemp/STATIONS_v4
 export async function POST (req) {
 
     const data = await req.json()
-    console.log(data);
     
     const res = (await Promise.all([ fetchAndParse(data.id, "v4Adj"), fetchAndParse(data.id, "v4Raw"), fetchAndParse(data.id, "v4Homogen"), fetchAndParse(data.id, "v4Clean")]))
     .reduce((prev, /** @type {Record<StationDataVersion, StationData>} */ cur) => ({
@@ -36,9 +35,9 @@ export async function POST (req) {
     ...cur
   }),{})
 
-    console.log(Object.keys(res));
     
-
+    console.log("response");
+    
     return new Response( JSON.stringify( {data: res}))
 }
 
@@ -59,9 +58,6 @@ async function fetchAndParse(id, version) {
         const trash = await axios.get(firstUrl(id, version));
         const rawData = (await axios.get(url(id, version))).data.trim();
         const lines = rawData.split("\n").slice(2, rawData.split("\n").length-1)
-
-        console.log(lines);
-        console.log(lines.slice(2, lines.length-1));
         
         if (lines.length < 2) {
             throw new Error("Invalid dataset format");

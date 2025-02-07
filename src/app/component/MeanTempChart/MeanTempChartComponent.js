@@ -135,6 +135,7 @@ const MeanTempChart = ({ data, stationName, population }) => {
 
   return (
     <div style={{ maxWidth: "800px", width:"85%", margin: "0 auto" }}>
+  
       <div
         className="grid"
         style={{

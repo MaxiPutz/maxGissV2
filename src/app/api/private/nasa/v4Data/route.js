@@ -29,7 +29,7 @@ export async function POST (req) {
 
     const data = await req.json()
     
-    const res = (await Promise.all([ fetchAndParse(data.id, "v4Adj"), fetchAndParse(data.id, "v4Raw"), fetchAndParse(data.id, "v4Homogen"), fetchAndParse(data.id, "v4Clean")]))
+    const res = (await Promise.all([ await fetchAndParse(data.id, "v4Adj"),await fetchAndParse(data.id, "v4Raw"),await fetchAndParse(data.id, "v4Homogen"), fetchAndParse(data.id, "v4Clean")]))
     .reduce((prev, /** @type {Record<StationDataVersion, StationData>} */ cur) => ({
     ...prev,
     ...cur

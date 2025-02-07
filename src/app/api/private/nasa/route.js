@@ -42,13 +42,12 @@ export async function POST (req) {
     console.log(data);
 
 
-    const res = (await Promise.all([ fetchAndParse(data.id, "v2Combi"),   fetchAndParse(data.id, "v2Raw"),  fetchAndParse(data.id, "v2Homogen")]))
+    const res = (await Promise.all([await fetchAndParse(data.id, "v2Combi"),await   fetchAndParse(data.id, "v2Raw"),await  fetchAndParse(data.id, "v2Homogen")]))
     .reduce((prev, /** @type {Record<StationDataVersion, StationData>} */ cur) => ({
     ...prev,
     ...cur
   }),{})
 
-    console.log(Object.keys(res));
     
 
     return new Response( JSON.stringify( {data: res}))

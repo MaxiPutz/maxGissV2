@@ -3,7 +3,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import StationComponent from "../station/stationComponent"
 import "./GissV4StationSelector.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import MeanTempChart from "../../MeanTempChart/MeanTempChartComponent"
 import { setMeanTemp } from "@/app/lib/slice/meanTempSlicer"
 import {ScanIcon, Search} from "lucide-react"
@@ -17,10 +17,10 @@ import { StationRadioCard } from "./radio/StationRadioCard"
 
 /**
  * 
- * @param {GissV4StationSelectorProps} props 
+ * @param {{gissV2Metadata: GissV4StationSelectorProps, flyInByRender : boolean}} props 
  * @returns 
  */
-export function GissV4StationSelector({gissV2Metadata}) {
+export function GissV4StationSelector({gissV2Metadata, flyInByRender}) {
 
     const dispatch = useDispatch()
     
@@ -35,7 +35,51 @@ export function GissV4StationSelector({gissV2Metadata}) {
      */
     const [stations4V, setStationsV4] = useState([])
 
-    const [isChecked, setChecked] = useState(false)
+    const [isChecked, setChecked] = useState(flyInByRender)
+
+
+    const hanldeV4Data = () => {
+        console.log("success in hanlde fetch");
+
+        fetch("/api/private/nasa/v4Stations", {
+            headers: {
+                 Authorization: `Bearer ${token}`
+            },
+            method: "POST",
+            body: JSON.stringify(gissV2Metadata),
+        }).then(ele => ele.json())
+        .then(ele => {
+            console.log("success", ele);
+            setStationsV4(ele)
+        })
+    }
+
+
+    const hanldeFetch = () => {
+        console.log("success in hanlde fetch");
+        
+        if(!stationData) {
+            fetch("/api/private/nasa", {
+                method: "POST",
+                body: JSON.stringify({
+                    id : gissV2Metadata.id
+                }),
+                headers: {
+                    "Authentication": `Bearer ${token}`
+                }
+            }).then (ele => ele.json())
+            .then(ele => {
+                console.log(ele);
+                dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele.data}))
+            })
+        }
+        hanldeV4Data()
+    }
+
+    useEffect(()=> {
+        if (!gissV2Metadata) return
+        hanldeV4Data()
+    }, [gissV2Metadata])
 
     return<>
 
@@ -44,39 +88,15 @@ export function GissV4StationSelector({gissV2Metadata}) {
             <Search style={{marginRight: "1.1rem",borderRadius: "0.5rem", padding: "0.5rem", background : "black", color: "white"}}/>
         </div>
 
-        <input  onChange={ (e) => {
+        <input  checked={isChecked} onChange={ (e) => {
             const isChecked = e.target.checked
+            setChecked(isChecked)
             if(isChecked) {
-                if(!stationData) {
-                    fetch("/api/private/nasa", {
-                        method: "POST",
-                        body: JSON.stringify({
-                            id : gissV2Metadata.id
-                        }),
-                        headers: {
-                            "Authentication": `Bearer ${token}`
-                        }
-                    }).then (ele => ele.json())
-                    .then(ele => {
-                        console.log(ele);
-                        dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele.data}))
-                    })
-                }
-
-                fetch("/api/private/nasa/v4Stations", {
-                    headers: {
-                         Authorization: `Bearer ${token}`
-                    },
-                    method: "POST",
-                    body: JSON.stringify(gissV2Metadata),
-                }).then(ele => ele.json())
-                .then(ele => {
-                    console.log("success", ele);
-                    setStationsV4(ele)
-                })
+               hanldeFetch()
             }
             
-        }} className="hide gissSelector" type="checkbox"/>
+        }
+        } className="hide gissSelector" type="checkbox"/>
         <div className="gissSelectorPage">
             <div className={`station-card`} onClick={()=> {
             }}>
@@ -89,15 +109,6 @@ export function GissV4StationSelector({gissV2Metadata}) {
             </div>
             <div>
                 <label className="stationTableContainer">
-                {
-                    
-                        <StationRadioCard 
-                        dispatch={dispatch} 
-                        gissV2Metadata={gissV2Metadata}
-                        token={token}
-                        stations4V={stations4V}
-                        />
-                }
 
                 { 
                 stationData !== undefined ? <label>
@@ -106,17 +117,19 @@ export function GissV4StationSelector({gissV2Metadata}) {
                  </label>
                 :
                 <></>
-                }
+            }
+            {                   
+                    <StationRadioCard 
+                    dispatch={dispatch} 
+                    gissV2Metadata={gissV2Metadata}
+                    token={token}
+                    stations4V={stations4V}
+                    />
+            }
                  </label>
             </div>
         </div>
     </label>
 
     </>
-}
-
-
-function Loading () {
-    return <>
-    Loading </>
 }

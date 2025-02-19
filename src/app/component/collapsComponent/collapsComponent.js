@@ -10,7 +10,7 @@ export function CollapsComponent ({children, header, id, key}) {
 
     const [isChecked, setIsChecked] = useState(false)
 
-    /**
+    /** 
      * @type {Metadata[]}
      */
     const metadatas = useSelector(state => state.metadata.metadata)
@@ -20,7 +20,7 @@ export function CollapsComponent ({children, header, id, key}) {
     
 
     return <>
-    <div key={key}>
+    <div key={key} className="collapsContainer">
         <div style={{display: "grid", gridTemplateColumns: "auto auto",}}>
 
         <label key={key}>

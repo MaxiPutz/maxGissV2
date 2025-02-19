@@ -29,23 +29,23 @@ export function StationRadioCard({ stations4V, token, dispatch, gissV2Metadata }
   return (
     <div className={styles.cardContainer}>
       {stations4V.slice(0, 35).map((ele, i) => (
-        <div key={ele.idV4} className={`${styles.stationCard} ${i===cardIndex ? styles.highlight : ""}`} onClick={() => handleStationSelect(ele, i)} >
+        <div key={i} className={`${styles.stationCard} ${i === cardIndex ? styles.highlight : ""}`} onClick={() => handleStationSelect(ele, i)} >
           <div className={styles.cardHeader}>
             <h3 className={styles.stationName}>{ele.stationName}</h3>
 
           </div>
           <div className={styles.cardBody}>
-            <div style={{display: "flex", alignItems: "center"}}>
-                <Ruler/>{ele.distance}
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Ruler />{ele.distance}
             </div>
-            <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
-                <Map/>
-              <strong>Lat:</strong> {ele.lat}  
-              <strong>Lng:</strong> {ele.lng}
+            <div style={{ display: "flex", alignItems: "center", gap: "5px", }}>
+              <Map />
+                Lat: {Number(ele.lat).toFixed(2)} <br></br>
+                Lng: {Number(ele.lng).toFixed(2)}
 
             </div>
-            <div style={{display: "flex", alignItems: "center"}}>
-                <CalendarRange/> {ele.yearFrom} -  {ele.yearTo}
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <CalendarRange /> {ele.yearFrom} -  {ele.yearTo}
             </div>
           </div>
         </div>

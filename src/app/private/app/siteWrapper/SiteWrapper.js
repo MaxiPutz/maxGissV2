@@ -1,3 +1,5 @@
+"use client"
+
 import MapBoxComponent from "@/app/component/mapbox/mapBoxComponent";
 import styles from "./SiteWrapper.module.css"
 import FilterComponent from "@/app/component/filter/filterComponent";
@@ -11,6 +13,11 @@ import { MeanTempMobile } from "@/app/component/MeanTempChart/mobile/MeanTempMob
 export function SiteWrapper() {
     const [isChecked, setChecked] = useState(false)
     const [isMinimizeChecked, setMinimzeChecked] = useState(false)
+
+    const [chartIndex, setChartIndex] = useState(-1)
+
+    const [isActive, setIsActive] = useState(false)
+
     /**
      *  @type {Metadata[]} 
      */
@@ -18,9 +25,16 @@ export function SiteWrapper() {
     const bearer = useAppSelector(state => state.bearer)
     return (
         <div className={styles.siteWrapper}>
-
-
-            <div className={styles.filter}>
+        <div className={styles.header}>
+            <header className="header">
+                <h1>NASA GISS Temperature Data</h1>
+                <p>Visualizing global temperature changes using NASA's GISS dataset.</p>
+            </header>
+        </div>
+        {
+            /* filter  */
+        }
+            <div className={`${styles.filter}  ${isActive ? styles.inActiveContent : styles.activeFilterContent}`}>
                 <label className={styles.label}>
                     <FilterIcon className={styles.filterIcon}/>
                     <input className={styles.filterCheckbox} checked={isChecked} onChange={()=> setChecked(!isChecked)} type="checkbox" style={{display: "none"}}/>
@@ -40,14 +54,27 @@ export function SiteWrapper() {
                         <MapBoxComponent/>            
                     </div>
             </div>
-            <div className={styles.list}>
-                <div className={styles.listCarousel}>
-                    {metadata.slice(0,50).map((ele,i) => <div onClick={() => console.log("clicki cklick ")} key={i}> <StationComponent key={i} station={ele} bearer={bearer}/>   </div>)} 
+            {
+            /* list  */
+            }
+            <div className={`${styles.list}  ${isActive ? styles.inActiveContent : styles.activeContent}`}>
+                <div className={`${styles.listCarousel} ${isMinimizeChecked ? styles.overMap : "" }`}>
+                    {metadata.slice(0,50).map((ele,i) => <div onClick={() => {
+                        console.log("chartindex", i);
+                        
+                        setChartIndex(i)
+                        setIsActive(true)
+                    }
+                    } key={i}> <StationComponent key={i} station={ele} bearer={bearer} isMobile={window.innerWidth < 1000}/>   </div>)} 
                 </div>
             </div>
-            <div className={styles.content}>
+            <div className={`${styles.content} ${isActive ? styles.activeContent : styles.inActiveContent}`}>
                 {
-                    /*window.innerWidth < 1000 */ true ? <MeanTempMobile /> : <MeantempPanelComponent/>
+                    window.innerWidth < 1000 ? 
+                    ( 
+                     <MeanTempMobile  initChartIndex={chartIndex} isActive={isActive} setIsActive={setIsActive}/> 
+                    ) 
+                     : <MeantempPanelComponent/>
                 }
             </div>
         </div>

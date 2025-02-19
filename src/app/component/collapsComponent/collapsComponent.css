@@ -14,3 +14,10 @@
     max-height: 0px;
     overflow: hidden;
 }
+
+
+@media (max-width : 1000) {
+    .collapsContainer {
+        width: 90%;
+    }
+}

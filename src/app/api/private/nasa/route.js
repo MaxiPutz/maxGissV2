@@ -67,8 +67,10 @@ async function fetchAndParse(id, version) {
       console.log(firstUrl(id, version));
       console.log(url(id, version));
       
-      await new Promise((res) => setTimeout(()=> res(), 100))
+      await new Promise((res) => setTimeout(()=> res(), 500))
 
+      console.log(firstUrl(id, version));
+      
       const trash = await axios.get(firstUrl(id, version))
 
       const response = await axios.get(url(id, version));

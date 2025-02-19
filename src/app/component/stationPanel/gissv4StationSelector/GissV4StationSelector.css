@@ -91,6 +91,15 @@ input[type="radio"] {
 @media (max-width: 1000px) {
     .gissSelectorPage {
         grid-template-columns: 1fr;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
     }
     
+    .gissSelector:checked ~ .gissSelectorPage  {
+        transform: translate(0px,0px);
+        overflow: scroll;
+    }
 }

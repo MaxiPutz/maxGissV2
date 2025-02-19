@@ -3,6 +3,8 @@
     position: absolute;
 }
 
+
+
 .hide {
     opacity: 0;
     max-height: 0;
@@ -17,12 +19,18 @@
     position: relative;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-areas: 
+    "h h h"
     "f c c"
     "l c c"
     "l c c"
     ;
     column-gap: 24px;
 } 
+
+.header {
+    display: grid;
+    grid-area: h;
+}
 
 .filter {
     display: grid;
@@ -37,8 +45,13 @@
 
 
 .list {
+    background-color: rgb(255,255,255,0.3);
     display: grid;
     grid-area: l;
+    overflow-y: scroll;
+    padding-top: 25px;
+    border-radius: 15px;
+    margin-top: 12px;;
 }
 
 
@@ -79,6 +92,10 @@
     overflow: hidden;  /* Prevent content overflow during height transition */
     transition: ease-in-out 300ms;
     border-radius: 50px;
+}
+
+.overMap {
+    z-index: 4;
 }
 
 .mapChecked {
@@ -136,23 +153,52 @@
 .content {
     display: grid;
     position: absolute;
-    overflow-y: scroll;
+    overflow-y: hidden;
     transition: ease-in-out 300ms;
     transform: translateX(0%);
     z-index: 6;
 }
 
 .filterMapChecked {
-    transform: translateX(10%);
+    transform: translateX(-10%);
     transition: ease-in-out 300ms;
     opacity: 1;
     z-index: 4;
+    position: absolute;
+    bottom: 0px
 }
+
+.filterMapUnChecked {
+    transform: translateX(300%);
+
+    transition: ease-in-out 300ms;
+    opacity: 1;
+    z-index: 4;
+    position: absolute;
+    bottom: 0px
+}
+
 
 .list {
     grid-area: l;
     overflow: scroll;
 }
 
+.activeContent {
+    z-index: 1;
+    opacity: 1;
+    transition: ease-in-out 300ms;
+}
+.activeFilterContent {
+    z-index: 2;
+    opacity: 1;
+    transition: ease-in-out 300ms;
+}
+.inActiveContent {
+    z-index: -1;
+    opacity: 0;
+    transition: ease-in-out 300ms;
+
+}
 
 }

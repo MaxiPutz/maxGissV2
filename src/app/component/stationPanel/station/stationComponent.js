@@ -16,10 +16,10 @@ import {Users, CalendarRange} from "lucide-react"
 
 /**
  * 
- * @param {station}  
+ * @param {{station: Metadata, bearer: string, isMobile: Boolean}}  
  * @returns 
  */
-export default function StationComponent ( {station, bearer}) {
+export default function StationComponent ( {station, bearer, isMobile}) {
 
     const [isLoading, setIsLoading] = useState(false)
 
@@ -39,6 +39,9 @@ export default function StationComponent ( {station, bearer}) {
     <div>
         <label className={ `${isLoading ? "disable" : ""} ${data? "data": ""}` }>
             <input type="checkbox" className="hide" onChange={() => {
+                if (isMobile) return
+                console.log("ismobile from stationcomonent", isMobile);
+                
                 setIsLoading(true)
                 fetch("/api/private/nasa", {
                     method: "POST",

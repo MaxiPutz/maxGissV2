@@ -10,6 +10,7 @@
   
   /* Each card with a light shadow and border */
   .stationCard {
+    min-width: 170px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;

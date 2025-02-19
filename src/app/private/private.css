@@ -5,7 +5,6 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #f4f4f4; /* Light background */
     color: black;
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -14,11 +13,10 @@
 
 /* Header */
 .header {
-    background: #e6e6e6; /* Soft grey for contrast */
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 5px;
     width: 95%; /* Reduce left/right space */
-    max-width: 800px;
     margin-bottom: 15px;
 }
 
@@ -34,9 +32,20 @@
 
 /* Main Content */
 main {
-    background: white;
     padding: 15px;
     border-radius: 5px;
     width: 95%; /* Reduce left/right space */
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
+
+
+@media (max-width: 1000) {
+    .private-container {
+        padding: 0px;
+    }
+
+    main {
+        padding: 0px;
+        width: 100%;
+    }
+} 

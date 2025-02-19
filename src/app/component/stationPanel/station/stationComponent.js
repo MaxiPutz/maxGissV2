@@ -6,6 +6,7 @@ import { setMeanTemp } from "@/app/lib/slice/meanTempSlicer";
 import { useState } from "react";
 import MeanTempChart from "../../MeanTempChart/MeanTempChartComponent";
 import { GissV4StationSelector } from "../gissv4StationSelector/GissV4StationSelector";
+import {Users, CalendarRange} from "lucide-react"
 
 /**
  * @typedef {Object} station
@@ -59,11 +60,27 @@ export default function StationComponent ( {station, bearer}) {
 
         <div className={`${data ? "data" : ""} station-card`}>
             <h3>{station.stationName}</h3>
-            <p><strong>Latitude:</strong> {station.lat}</p>
-            <p><strong>Longitude:</strong> {station.lng}</p>
-            <p><strong>Population:</strong> {station.population}</p>
-            <p><strong>Active From:</strong> {station.yearFrom} - {station.yearTo}</p>
-            <GissV4StationSelector gissV2Metadata={station}/>
+            {
+                /*
+                <p><strong>Latitude:</strong> {station.lat}</p>
+                <p><strong>Longitude:</strong> {station.lng}</p>
+                */
+            }
+            <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <Users/> {station.population}
+            </div>
+            <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <CalendarRange/> {station.yearFrom} - {station.yearTo}
+            </div>
+       
+
+            {
+                /**
+                 <p><strong>Active From:</strong> {station.yearFrom} - {station.yearTo}</p>
+                 <p><  strong>Population:</strong> {station.population}</p>
+                 <GissV4StationSelector gissV2Metadata={station}/>
+                 */
+            }
         </div>
         </label>
 

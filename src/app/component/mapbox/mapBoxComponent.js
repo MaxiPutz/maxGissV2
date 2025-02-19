@@ -7,7 +7,8 @@ import "./mapbox.css"
 import { useEffect, useRef } from 'react';
 import { ENV } from "../../gloabVariable";
 import StoreProvider from "@/app/StoreProvider";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setViewPoint } from "@/app/lib/slice/mapSlice";
 
 
 let myTrigger = undefined
@@ -26,6 +27,9 @@ export default  function MapBoxComponent() {
   const markersRef = useRef([]);
   const markersRef2 = useRef([]);
   
+
+  const dispatch = useDispatch()
+
   useEffect(() => {
     if (env.MAPBOX_KEY && !mapRef.current) {
       mapboxgl.accessToken = env.MAPBOX_KEY
@@ -39,6 +43,30 @@ export default  function MapBoxComponent() {
         zoom: 0.1
       });
 
+
+
+      mapRef.current.on("move", () => {
+        if(!mapRef) {
+          return
+        }
+        const bounds = mapRef.current.getBounds();
+        const ne = bounds.getNorthEast(); // top-right corner
+        const sw = bounds.getSouthWest(); // bottom-left corner
+      
+        // Create your payload, e.g., filter bounds
+        const filterData = {
+          minLng: sw.lng,
+          maxLng: ne.lng,
+          maxLat: ne.lat,
+          minLat: sw.lat,
+        };
+
+        console.log(filterData);
+        clearTimeout(myTrigger)
+        myTrigger = setTimeout(() => {
+          dispatch(setViewPoint(filterData))
+        }, 250);
+      })
 
       return () => {
         mapRef.current.remove()

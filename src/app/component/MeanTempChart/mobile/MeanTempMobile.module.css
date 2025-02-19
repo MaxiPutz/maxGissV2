@@ -1,0 +1,49 @@
+.mobileContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* The container holding all sections */
+  .sectionsContainer {
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  /* Each section takes the full viewport height */
+  .section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Additional styling for each section */
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Styling for arrow buttons */
+  .arrowButton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Position the up arrow at the top */
+  .upButton {
+    top: 1rem;
+  }
+  
+  /* Position the down arrow at the bottom */
+  .downButton {
+    bottom: 1rem;
+  }
+  

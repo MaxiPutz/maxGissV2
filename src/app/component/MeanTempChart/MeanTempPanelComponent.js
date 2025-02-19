@@ -35,7 +35,7 @@ export function MeantempPanelComponent() {
                     const name = md.stationName
                     const population = md.population
                     return <div key={i}>
-                <CollapsComponent   header={name}  >
+                <CollapsComponent   header={name} id={id} >
                     <MeanTempChart key={id} data={val}stationName={name} population={population}></MeanTempChart>
                 </CollapsComponent>
                 </div> 

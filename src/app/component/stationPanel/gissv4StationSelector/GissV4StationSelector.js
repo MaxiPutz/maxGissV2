@@ -6,7 +6,8 @@ import "./GissV4StationSelector.css"
 import { useState } from "react"
 import MeanTempChart from "../../MeanTempChart/MeanTempChartComponent"
 import { setMeanTemp } from "@/app/lib/slice/meanTempSlicer"
-
+import {ScanIcon, Search} from "lucide-react"
+import { StationRadioCard } from "./radio/StationRadioCard"
 
 /**
  * @typedef {Object} GissV4StationSelectorProps
@@ -39,8 +40,8 @@ export function GissV4StationSelector({gissV2Metadata}) {
     return<>
 
     <label >
-        <div className="searchArea">
-            Press for Details
+        <div style={{display: "flex",  justifyContent: "flex-end"}}>
+            <Search style={{marginRight: "1.1rem",borderRadius: "0.5rem", padding: "0.5rem", background : "black", color: "white"}}/>
         </div>
 
         <input  onChange={ (e) => {
@@ -89,64 +90,15 @@ export function GissV4StationSelector({gissV2Metadata}) {
             <div>
                 <label className="stationTableContainer">
                 {
-                    stations4V.length === 0 ? <Loading/> : (
                     
-                    <table> 
-                        <thead>
-                        <tr>
-                            <th>Select       </th>
-                            <th>Distance     </th>
-                            <th>Station Name </th>
-                            <th>Lat          </th>
-                            <th>Lng          </th>
-                            <th>Year From    </th>
-                            <th>Year To      </th>
-                        </tr>
-                        </thead>           
-                        {
-                        stations4V.map((ele => (
-                        <tbody  key={ele.idV4}>
+                        <StationRadioCard 
+                        dispatch={dispatch} 
+                        gissV2Metadata={gissV2Metadata}
+                        token={token}
+                        stations4V={stations4V}
+                        />
+                }
 
-                        <tr onChange={() => {
-                            console.log(ele);
-
-                            fetch("/api/private/nasa/v4Data", {
-                                headers: {
-                                    Authorization: `Bearer ${token}`
-                                },
-                                method: "POST",
-                                body: JSON.stringify({id: ele.v4Id})
-                            }).then(ele => ele.json())
-                            .then(ele => {
-                                dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele.data}))
-                                console.log(ele)
-                            }
-                        )
-
-                        }
-                        }>
-                                 <td>
-                                    <label key={ele.v4Id}>
-                                        <input 
-                                        type="radio" 
-                                        name="stationSelect" 
-                                        onChange={() => console.log(ele.id)} />
-                                        <div style={{display: "grid"}}></div>
-                                    </label>
-                                </td>
-                                <td>{ele.distance}      </td>
-                                <td>{ele.stationName}   </td>
-                                <td>{ele.lat}           </td>
-                                <td>{ele.lng}           </td>
-                                <td>{ele.yearFrom}      </td>
-                                <td>{ele.yearTo}        </td>
-                        </tr>
-                        </tbody>
-                        ))).slice(0,5)  
-                        }
-                    </table>
-                    
-                 )}
                 { 
                 stationData !== undefined ? <label>
                     <input onChange={()=> undefined} type="checknox" className="hide"/>

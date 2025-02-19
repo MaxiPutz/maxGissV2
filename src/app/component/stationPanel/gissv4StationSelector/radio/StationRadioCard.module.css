@@ -1,0 +1,56 @@
+.cardContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Each card with a light shadow and border */
+  .stationCard {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: calc(33.33% - 1rem); /* Adjust width for responsive grid */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 200ms ease-in-out;
+    position: relative;
+  }
+  
+  .stationCard:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Header styling */
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stationName {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  /* Label and icon styling */
+  .selectLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* Body styling */
+  .cardBody p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+  
+
+ .highlight {
+  background-color: greenyellow;
+ }

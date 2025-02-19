@@ -8,6 +8,7 @@ import { setFilterMetadata } from "@/app/lib/slice/metadataSlice"
 
 import "./filterComponent.css"
 import ExponentialMultiRangeSlider from "./multiRangeSlider/multiRangeSliderExp"
+import { LogIn } from "lucide-react"
 
 
 
@@ -26,17 +27,23 @@ export default function FilterComponent() {
 
     let filteredMetadata = metadata.map(ele => ele)
 
+    /**
+     * @type {ViewPointType}
+     */
+    const viewPoint = useSelector((state) => state.viewPoint.viewPoint)
+
+    console.log(viewPoint, "viewPoint");
 
     const dispatch = useDispatch()
 
-    const [minLat, setMinLat] = useState(-181) 
-    const [minLng, setMinLng] = useState(-181) 
-    const [minPop, setMinPop] = useState(-181) 
-    const [minYear, setMinYear] = useState(-181) 
+    const [minLat, setMinLat] = useState(viewPoint.minLat) 
+    const [minLng, setMinLng] = useState(-180) 
+    const [minPop, setMinPop] = useState(9_999) 
+    const [minYear, setMinYear] = useState(1_879) 
 
 
-    const [maxLat,  setMaxLat] =  useState(1_810_000_000) 
-    const [maxLng,  setMaxLng] =  useState(1_810_000_000) 
+    const [maxLat,  setMaxLat] =  useState(90) 
+    const [maxLng,  setMaxLng] =  useState(180) 
     const [maxPop,  setMaxPop] =  useState(1_810_000_000)  
     const [maxYear, setMaxYear] = useState(1_810_000_000) 
 
@@ -82,15 +89,16 @@ export default function FilterComponent() {
         filteredMetadata = filteredMetadata.filter(ele => (ele.yearFrom<=minYear)) // < here 
         console.log("end minchain",filteredMetadata.length);
 
+        console.log(minLat, maxLat, "chain");
+        
         dispatch(setFilterMetadata(filteredMetadata))
     }
 
     useEffect(()=> {
 
         performFilter()
-    }, [isYearfilterActive, stationName, minLat, maxLat, minLng, maxLng, minPop, maxPop, minYear, maxYear, metadata, dispatch]);
+    }, [isYearfilterActive, stationName, minLat, maxLat, minLng, maxLng, minPop, maxPop, minYear, maxYear, metadata ,dispatch]);
 
-  
 
 
     const setLat = (min, max) => {
@@ -116,6 +124,7 @@ export default function FilterComponent() {
     }
 
 
+
     return (
         <div className="filter-panel">
           <h2>Filter Panel</h2>
@@ -132,12 +141,12 @@ export default function FilterComponent() {
     
           <div className="filter-group">
             <label>Latitude</label>
-            <MultiRangeSlider min={-90} max={90} onChange={({ min, max }) => setLat(min, max)} />
+            <MultiRangeSlider min={viewPoint.minLat.toFixed(2)} max={viewPoint.maxLat.toFixed(2)} setMax={90} setMin={-90}  onChange={({ min, max }) => setLat(min, max)} />
           </div>
     
           <div className="filter-group">
             <label>Longitude</label>
-            <MultiRangeSlider min={-180} max={180} onChange={({ min, max }) => setLng(min, max)} />
+            <MultiRangeSlider min={viewPoint.minLng.toFixed(2)} max={viewPoint.maxLng.toFixed(2)} onChange={({ min, max }) => setLng(min, max)} />
           </div>
     
           <div className="filter-group">
@@ -150,7 +159,7 @@ export default function FilterComponent() {
             <label>Year <input type="checkbox" checked={isYearfilterActive} onChange={(e)=> {
               setIsYearfilterActive(!isYearfilterActive)} 
               }/> (active) </label>
-            <MultiRangeSlider min={1879} max={2012} setMin={1880} setMax={2011}  onChange={({ min, max }) => setYear(min, max)} />
+            <MultiRangeSlider min={1880} max={2010} setMin={1881} setMax={2011}  onChange={({ min, max }) => setYear(min, max)} />
           </div>
         </div>
       );

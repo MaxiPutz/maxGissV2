@@ -1,0 +1,56 @@
+import React, { useState } from "react";
+import { Check, Map, CalendarRange, Ruler } from "lucide-react";
+import styles from "./StationRadioCard.module.css"; // Your CSS module
+import { setMeanTemp } from "@/app/lib/slice/meanTempSlicer";
+
+export function StationRadioCard({ stations4V, token, dispatch, gissV2Metadata }) {
+  // A function to handle station selection
+
+  const [cardIndex, setCardIndex] = useState(-1)
+
+
+  const handleStationSelect = (ele, i) => {
+    console.log(ele);
+    fetch("/api/private/nasa/v4Data", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      method: "POST",
+      body: JSON.stringify({ id: ele.v4Id }),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        dispatch(setMeanTemp({ id: gissV2Metadata.id, data: data.data }));
+        console.log(data);
+      });
+    setCardIndex(i)
+  };
+
+  return (
+    <div className={styles.cardContainer}>
+      {stations4V.slice(0, 35).map((ele, i) => (
+        <div key={ele.idV4} className={`${styles.stationCard} ${i===cardIndex ? styles.highlight : ""}`} onClick={() => handleStationSelect(ele, i)} >
+          <div className={styles.cardHeader}>
+            <h3 className={styles.stationName}>{ele.stationName}</h3>
+
+          </div>
+          <div className={styles.cardBody}>
+            <div style={{display: "flex", alignItems: "center"}}>
+                <Ruler/>{ele.distance}
+            </div>
+            <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
+                <Map/>
+              <strong>Lat:</strong> {ele.lat}  
+              <strong>Lng:</strong> {ele.lng}
+
+            </div>
+            <div style={{display: "flex", alignItems: "center"}}>
+                <CalendarRange/> {ele.yearFrom} -  {ele.yearTo}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+

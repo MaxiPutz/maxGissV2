@@ -4,6 +4,7 @@ import { bearerSlice } from './slice/bearer'
 import { envSlice } from './slice/envSlicer'
 import { meanTempSlicer } from './slice/meanTempSlicer'
 import { createWrapper } from 'next-redux-wrapper'
+import { mapSlice } from './slice/mapSlice'
 
 
 
@@ -24,7 +25,8 @@ export const makeStore = () => {
         meanTemp: meanTempSlicer.reducer,
         bearer: bearerSlice.reducer,
         metadata: metadataSlice.reducer,
-        env: envSlice.reducer
+        env: envSlice.reducer,
+        viewPoint: mapSlice.reducer
         }
 
     })

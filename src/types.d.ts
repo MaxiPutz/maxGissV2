@@ -5,6 +5,17 @@ import type { StationData } from "@/types/StationData"
 import type {StationDataVersion } from "@/app/api/private/nasa/route"
 import type { GissV4Metadata } from "./app/api/private/nasa/v4Stations/route";
 
+
+export interface ViewPointType {
+    minLat: number,
+    maxLat: number,
+    minLng: number,
+    maxLng: number,
+
+}
+
+
+
 declare global {
     type StationData = import("@/types/StationData").StationData;
     type Metadata = import("@/app/lib/store"). Metadata;
@@ -12,6 +23,7 @@ declare global {
     type foo = import("@/app/api/private/initMetadata/route").foo;
     type StationDataVersion = import("@/app/api/private/nasa/route").StationDataVersion
     type GissV4Metadata = import("./app/api/private/nasa/v4Stations/route").GissV4Metadata
+    type ViewPointType = import("./types").ViewPointType;
 }
 
 export {};

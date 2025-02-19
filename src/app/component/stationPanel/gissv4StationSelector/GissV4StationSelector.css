@@ -9,11 +9,10 @@
     backdrop-filter: blur(10px); /* Blurred background */
     transform: translate(-50%, -200%); /* Start hidden above the viewport */
     transition: transform 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
-    z-index: 1000; /* Ensure it's above other elements */
     border-radius: 10px; /* Optional rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: auto auto;
 }
 
 
@@ -21,8 +20,17 @@
 
 }
 
+.gissSelector:not(:checked) ~ .gissSelectorPage {
+    transform: translate(-250%, -200%);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+
 .gissSelector:checked ~ .gissSelectorPage {
     transform: translate(-50%, 0); /* Slide into view */
+    opacity: 1;
+    z-index: 10;
 }
 
 .stationTableContainer {
@@ -77,4 +85,12 @@ input[type="radio"] {
 .toleft{
     justify-self: flex-start;
     margin-bottom: 25px;;
+}
+
+
+@media (max-width: 1000px) {
+    .gissSelectorPage {
+        grid-template-columns: 1fr;
+    }
+    
 }

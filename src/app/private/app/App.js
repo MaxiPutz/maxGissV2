@@ -13,6 +13,7 @@ import FilterComponent from "@/app/component/filter/filterComponent"
 import StationPanelComponent from "@/app/component/stationPanel/stationpanelComponent"
 import { MeantempPanelComponent } from "@/app/component/MeanTempChart/MeanTempPanelComponent"
 import JSZip from "jszip"
+import { SiteWrapper } from "./siteWrapper/SiteWrapper"
 
 export default function App() {
 
@@ -79,8 +80,11 @@ export default function App() {
 
         return (
           <>
-    
-              <div className="grid2fr1frcol">
+            <SiteWrapper/>
+            {
+
+                /*
+                <div className="grid2fr1frcol">
                 <div>
                     <div  className="grid2col">
                         <div>
@@ -100,6 +104,8 @@ export default function App() {
                     <MeantempPanelComponent></MeantempPanelComponent>
                 </div>
               </div>
+              */
+            }
           </>
         )
 

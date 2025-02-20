@@ -16,7 +16,7 @@
 }
 
 
-@media (max-width : 1000) {
+@media (max-width : 1000px) {
     .collapsContainer {
         width: 90%;
     }

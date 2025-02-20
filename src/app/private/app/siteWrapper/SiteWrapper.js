@@ -4,7 +4,7 @@ import MapBoxComponent from "@/app/component/mapbox/mapBoxComponent";
 import styles from "./SiteWrapper.module.css"
 import FilterComponent from "@/app/component/filter/filterComponent";
 import {FilterIcon, Minimize2, Maximize2} from "lucide-react"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppSelector } from "@/app/lib/hooks";
 import StationComponent from "@/app/component/stationPanel/station/stationComponent";
 import { MeantempPanelComponent } from "@/app/component/MeanTempChart/MeanTempPanelComponent";
@@ -17,6 +17,22 @@ export function SiteWrapper() {
     const [chartIndex, setChartIndex] = useState(-1)
 
     const [isActive, setIsActive] = useState(false)
+
+    const [wWidth, setWWidth] = useState(0)
+
+    
+    useEffect(() => {
+        const handleResize = () => {
+            setWWidth(window.innerWidth);
+        };
+        handleResize()
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
+    
+
+      console.log(wWidth, "wWidth");
+      
 
     /**
      *  @type {Metadata[]} 
@@ -70,7 +86,7 @@ export function SiteWrapper() {
             </div>
             <div className={`${styles.content} ${isActive ? styles.activeContent : styles.inActiveContent}`}>
                 {
-                    window.innerWidth < 1000 ? 
+                    wWidth < 1000 ? 
                     ( 
                      <MeanTempMobile  initChartIndex={chartIndex} isActive={isActive} setIsActive={setIsActive}/> 
                     ) 

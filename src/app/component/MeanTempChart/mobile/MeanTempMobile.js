@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ArrowBigDown, ArrowBigUp, ArrowLeft } from "lucide-react";
@@ -145,6 +146,20 @@ function MobileChart({ station, observerRoot, isActive }) {
     }
 
 
+    const [wWidth, setWWidth] = useState(0)
+
+    
+    useEffect(() => {
+        const handleResize = () => {
+            setWWidth(window.innerWidth);
+        };
+        handleResize()
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
+    
+
+
     const hook = useSectionHook({
         ref: ref,
         observerRoot: observerRoot,
@@ -153,7 +168,7 @@ function MobileChart({ station, observerRoot, isActive }) {
             
             handleData()
         },
-        rootMargin: `${window.innerHeight}px`,
+        rootMargin: `${wWidth}px`,
         threshold: 0.1,
         observerName: station.stationName
     })

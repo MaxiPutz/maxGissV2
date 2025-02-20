@@ -8,6 +8,7 @@ import MeanTempChart from "../../MeanTempChart/MeanTempChartComponent"
 import { setMeanTemp } from "@/app/lib/slice/meanTempSlicer"
 import {ScanIcon, Search} from "lucide-react"
 import { StationRadioCard } from "./radio/StationRadioCard"
+import MultiDatasetChartWrapper from "../../MeanTempChart/v2/MultiDatasetChartWrapper"
 
 /**
  * @typedef {Object} GissV4StationSelectorProps
@@ -70,7 +71,7 @@ export function GissV4StationSelector({gissV2Metadata, flyInByRender}) {
             }).then (ele => ele.json())
             .then(ele => {
                 console.log(ele);
-                dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele.data}))
+                dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele}))
             })
         }
         hanldeV4Data()
@@ -113,7 +114,11 @@ export function GissV4StationSelector({gissV2Metadata, flyInByRender}) {
                 { 
                 stationData !== undefined ? <label>
                     <input onChange={()=> undefined} type="checknox" className="hide"/>
-                        <MeanTempChart population={gissV2Metadata.population} data={stationData} stationName={gissV2Metadata.stationName}></MeanTempChart>
+                    {
+
+                        //<MeanTempChart population={gissV2Metadata.population} data={stationData} stationName={gissV2Metadata.stationName}></MeanTempChart>
+                    }
+                    <MultiDatasetChartWrapper data={stationData} />
                  </label>
                 :
                 <></>

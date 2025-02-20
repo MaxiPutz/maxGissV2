@@ -61,7 +61,6 @@ export default  function MapBoxComponent() {
           minLat: sw.lat,
         };
 
-        console.log(filterData);
         clearTimeout(myTrigger)
         myTrigger = setTimeout(() => {
           dispatch(setViewPoint(filterData))

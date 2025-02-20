@@ -147,6 +147,7 @@ const ExternalLegend = ({ datasets, chartRef }) => {
  */
 const MeanTempChart = ({ data, stationName, population }) => {
   // Filter out invalid metANN values.
+  const a = {...data}
   data = Object.entries(data).reduce(
     (prev, [key, val]) => ({
       ...prev,

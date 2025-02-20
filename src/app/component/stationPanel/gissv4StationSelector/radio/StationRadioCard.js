@@ -8,7 +8,11 @@ export function StationRadioCard({ stations4V, token, dispatch, gissV2Metadata }
 
   const [cardIndex, setCardIndex] = useState(-1)
 
-
+  /**
+   * 
+   * @param {Metadata} ele 
+   * @param {*} i 
+   */
   const handleStationSelect = (ele, i) => {
     console.log(ele);
     fetch("/api/private/nasa/v4Data", {
@@ -20,7 +24,14 @@ export function StationRadioCard({ stations4V, token, dispatch, gissV2Metadata }
     })
       .then((resp) => resp.json())
       .then((data) => {
-        dispatch(setMeanTemp({ id: gissV2Metadata.id, data: data.data }));
+
+        const dataWithStationName = Object.entries(data.data).reduce((prev, [key, val])=>({
+          ...prev,
+          [key] : val.map(e => ({...e, name: ele.stationName}))
+        }),{})
+        console.log(dataWithStationName, "dataWithStationanme");
+        
+        dispatch(setMeanTemp({ id: gissV2Metadata.id, data: dataWithStationName }));
         console.log(data);
       });
     setCardIndex(i)

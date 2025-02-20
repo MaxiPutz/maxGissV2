@@ -6,6 +6,7 @@ import MeanTempChart from "./MeanTempChartComponent"
 
 import "./MeanTemp.css"
 import { CollapsComponent } from "../collapsComponent/collapsComponent"
+import MultiDatasetChartWrapper from "./v2/MultiDatasetChartWrapper"
 
 export function MeantempPanelComponent() {
     const meanTempObj = useSelector(state => state.meanTemp )
@@ -36,7 +37,12 @@ export function MeantempPanelComponent() {
                     const population = md.population
                     return <div key={i}>
                 <CollapsComponent   header={name} id={id} >
-                    <MeanTempChart key={id} data={val}stationName={name} population={population}></MeanTempChart>
+                    <MultiDatasetChartWrapper data={val}/>
+                {
+                    /**
+                        <MeanTempChart key={id} data={val}stationName={name} population={population}></MeanTempChart>  
+                     **/
+                }
                 </CollapsComponent>
                 </div> 
                 }

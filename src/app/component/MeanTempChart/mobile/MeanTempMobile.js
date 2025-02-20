@@ -43,9 +43,6 @@ export function MeanTempMobile({ initChartIndex = 0, isActive, setIsActive }) {
         }
     };
 
-    console.log(styles);
-    console.log( `${isActive ? styles.active : styles.notActive} active`);
-    console.log( `${styles.notActive} active`);
     
     return (
         <div className={`${styles.mobilePage} ${isActive ? styles.active : styles.notActive}`} >
@@ -106,16 +103,9 @@ function MobileChart({ station, observerRoot, isActive }) {
     const dispatch = useDispatch()
 
 
-    console.log(tmpData2[id], "data tmp2");
-
-    console.log(id, "data id");
-    console.log(tmpData, "dataFuture");
     
 
     const handleData = ()=> {
-        console.log(isLoading, "hello fetch");
-        console.log(tmpData, "hello fetch", station.stationName);
-        console.log(isActive, "hello fetch");
 
         
         if (isLoading) return
@@ -164,7 +154,6 @@ function MobileChart({ station, observerRoot, isActive }) {
         ref: ref,
         observerRoot: observerRoot,
         callback: () =>  {
-            console.log("hello fetchcallback will start", station.stationName);
             
             handleData()
         },

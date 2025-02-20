@@ -32,7 +32,6 @@ export default function FilterComponent() {
      */
     const viewPoint = useSelector((state) => state.viewPoint.viewPoint)
 
-    console.log(viewPoint, "viewPoint");
 
     const dispatch = useDispatch()
 
@@ -54,33 +53,23 @@ export default function FilterComponent() {
 
     const performFilter = () => {   
         if (stationName !== "") {
-            console.log("name serach chain", stationName, filteredMetadata.length);
             
             filteredMetadata = filteredMetadata.filter(ele => ele.stationName.toLocaleLowerCase().includes(stationName.toLocaleLowerCase()))
-            console.log("name serach chain", stationName, filteredMetadata.length);
 
         }
-        console.log("start filter chain",filteredMetadata.length);
-
         filteredMetadata = filteredMetadata.filter(ele => ele.lat<maxLat)
-        console.log("begin maxchain",filteredMetadata.length);
         
         filteredMetadata = filteredMetadata.filter(ele => ele.lng<maxLng)     
-        console.log("chain",filteredMetadata.length);
 
         filteredMetadata = filteredMetadata.filter(ele => ele.population<maxPop)
-        console.log("chain",filteredMetadata.length);
 
         if (isYearfilterActive)
         filteredMetadata = filteredMetadata.filter(ele => (ele.yearTo>=maxYear)) /// < here 
-        console.log("end maxchain",filteredMetadata.length);
 
         
         filteredMetadata = filteredMetadata.filter(ele => ele.lat>minLat)   
-        console.log("begin min chain",filteredMetadata.length);
 
         filteredMetadata = filteredMetadata.filter(ele => ele.lng>minLng)
-        console.log("chain",filteredMetadata.length);
 
         filteredMetadata = filteredMetadata.filter(ele => ele.population>=minPop)
         console.log("chain",filteredMetadata.length);

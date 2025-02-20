@@ -18,6 +18,7 @@
  * @property {string} J_J_A - Data for June, July, August average.
  * @property {string} S_O_N - Data for September, October, November average.
  * @property {string} metANN - Data for the entire year (annual average).
+ * @property {string | undefined} name
  */
 
 

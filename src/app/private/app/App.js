@@ -22,7 +22,6 @@ export default function App() {
         const env = useSelector((state) => state.env)
     
 
-        console.log("env from app", env);
         
         useEffect(()=> {
             const toke= document.cookie.split(";")

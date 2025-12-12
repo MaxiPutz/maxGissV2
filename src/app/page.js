@@ -1,6 +1,6 @@
 "use client"; // Required for using hooks
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
+import Link from "next/link";
 import { useState } from "react";
 import Login from "./login/page";
 export default function Home() {

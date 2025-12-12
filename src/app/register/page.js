@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import "./register.css"; // Ensure you have this CSS file
+import Link from "next/link";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function Register() {

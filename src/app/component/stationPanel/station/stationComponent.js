@@ -8,6 +8,8 @@ import MeanTempChart from "../../MeanTempChart/MeanTempChartComponent";
 import { GissV4StationSelector } from "../gissv4StationSelector/GissV4StationSelector";
 import {Users, CalendarRange} from "lucide-react"
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 /**
  * @typedef {Object} station
  * @property {import("@/app/lib/store").Metadata} station
@@ -43,10 +45,12 @@ export default function StationComponent ( {station, bearer, isMobile}) {
                 console.log("ismobile from stationcomonent", isMobile);
                 
                 setIsLoading(true)
-                fetch("/api/private/nasa", {
+                fetch(`${basePath}/api/private/nasa`, {
                     method: "POST",
                     body: JSON.stringify({
-                        id : station.id
+                        id : station.id,
+                        lat: station.lat,
+                        lng: station.lng
                     }),
                     headers: {
                         "Authentication": `Bearer ${bearer}`
@@ -54,7 +58,7 @@ export default function StationComponent ( {station, bearer, isMobile}) {
                 }).then (ele => ele.json())
                 .then(ele => {
                     console.log(ele);
-                    dispatch(setMeanTemp({id: station.id, data: ele.data}))
+                    dispatch(setMeanTemp({id: station.id, data: ele.data, lat: station.lat, lng: station.lng}))
                     setIsLoading(false)
                 })
 

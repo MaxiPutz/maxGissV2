@@ -14,6 +14,8 @@ import StationPanelComponent from "@/app/component/stationPanel/stationpanelComp
 import { MeantempPanelComponent } from "@/app/component/MeanTempChart/MeanTempPanelComponent"
 import JSZip from "jszip"
 import { SiteWrapper } from "./siteWrapper/SiteWrapper"
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 
 export default function App() {
 
@@ -38,7 +40,7 @@ export default function App() {
         useEffect(()=> {
             if (token) {
 
-                fetch("/api/private/env", {
+                fetch(`${basePath}/api/private/env`, {
                     headers:{
                         Authorization: `Bearer ${token}`
                     }
@@ -53,7 +55,7 @@ export default function App() {
                     }))
                 })
 
-                fetch("/api/private/initMetadata", {
+                fetch(`${basePath}/api/private/initMetadata`, {
                     headers:{
                         Authorization: `Bearer ${token}`
                     }

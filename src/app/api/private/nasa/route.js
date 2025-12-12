@@ -39,7 +39,8 @@ const url = (id) => `https://data.giss.nasa.gov/tmp/gistemp/STATIONS_v2/tmp_${id
 export async function POST (req) {
     const data = await req.json()
 
-    console.log(data);
+
+    console.log("giss v2 data",data);
 
 
     const res = (await Promise.all([await fetchAndParse(data.id, "v2Combi"),await   fetchAndParse(data.id, "v2Raw"),await  fetchAndParse(data.id, "v2Homogen")]))

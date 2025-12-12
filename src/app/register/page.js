@@ -2,15 +2,17 @@
 
 import { useState } from "react";
 import "./register.css"; // Ensure you have this CSS file
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const h = `test`
     return (
         <div className="register-container">
             <nav className="nav">
-                <a href="/" className="nav-link">Home</a>
+                <a href={`${basePath}/`} className="nav-link">Home</a>
                 <a href="/register" className="nav-link active">Register</a>
             </nav>
 
@@ -38,7 +40,7 @@ export default function Register() {
 
                 <button
                     onClick={() => {
-                        fetch("/api/register", {
+                        fetch(`${basePath}/api/register`, {
                             method: "POST",
                             body: JSON.stringify({ email, password }),
                         })
@@ -49,7 +51,8 @@ export default function Register() {
                                 return;
                             }
                             document.cookie = `token=${ele.token}`;
-                            location.href = "/private";
+                            location.href = `${basePath}/private`;
+
                         })
                         .catch(() => {
                             alert("Registration failed");

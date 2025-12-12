@@ -11,6 +11,7 @@ import { GissV4StationSelector } from "../../stationPanel/gissv4StationSelector/
 import SkyBackground from "../../background/Background";
 import Loading from "react-loading";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 /**
  * Mobile view that translates vertically between sections.
  * @param {{initChartIndex?: number, isActive: boolean, setIsActive: Function(boolean)}} props
@@ -115,10 +116,12 @@ function MobileChart({ station, observerRoot, isActive }) {
 
         clearTimeout(timer )
         timer = setTimeout(()=> {
-            fetch("/api/private/nasa", {
+            fetch(`${basePath}/api/private/nasa`, {
                 method: "POST",
                 body: JSON.stringify({
-                    id: id
+                    id: id,
+                    lat: station.lat,
+                    lng: station.lng
                 }),
                 headers: {
                     "Authentication": `Bearer ${bearer}`
@@ -129,7 +132,7 @@ function MobileChart({ station, observerRoot, isActive }) {
                 console.log(id, "data id");
                 
                 setIsLoading(false)
-                dispatch(setMeanTemp({ id: id, data: ele.data }))
+                dispatch(setMeanTemp({ id: id, data: ele.data, lat: station.lat, lng: station.lng }))
             })
             setIsLoading(true)
         }, 300)

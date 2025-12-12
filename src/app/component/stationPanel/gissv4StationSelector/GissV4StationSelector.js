@@ -10,6 +10,7 @@ import {ScanIcon, Search} from "lucide-react"
 import { StationRadioCard } from "./radio/StationRadioCard"
 import MultiDatasetChartWrapper from "../../MeanTempChart/v2/MultiDatasetChartWrapper"
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 /**
  * @typedef {Object} GissV4StationSelectorProps
  * @property {Metadata} gissV2Metadata
@@ -42,7 +43,7 @@ export function GissV4StationSelector({gissV2Metadata, flyInByRender}) {
     const hanldeV4Data = () => {
         console.log("success in hanlde fetch");
 
-        fetch("/api/private/nasa/v4Stations", {
+        fetch(`${basePath}/api/private/nasa/v4Stations`, {
             headers: {
                  Authorization: `Bearer ${token}`
             },
@@ -60,10 +61,12 @@ export function GissV4StationSelector({gissV2Metadata, flyInByRender}) {
         console.log("success in hanlde fetch");
         
         if(!stationData) {
-            fetch("/api/private/nasa", {
+            fetch(`${basePath}/api/private/nasa`, {
                 method: "POST",
                 body: JSON.stringify({
-                    id : gissV2Metadata.id
+                    id : gissV2Metadata.id,
+                    lat: stationData.lat,
+                    lng: stationData.lng
                 }),
                 headers: {
                     "Authentication": `Bearer ${token}`
@@ -71,7 +74,7 @@ export function GissV4StationSelector({gissV2Metadata, flyInByRender}) {
             }).then (ele => ele.json())
             .then(ele => {
                 console.log(ele);
-                dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele}))
+                dispatch(setMeanTemp({id: gissV2Metadata.id, data: ele, lat: station.lat, lng: station.lng}))
             })
         }
         hanldeV4Data()

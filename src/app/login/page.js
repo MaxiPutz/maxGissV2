@@ -3,6 +3,8 @@
 import { useState } from "react";
 import "./login.css"; // Ensure you create this CSS file
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function Login() {
     const [email, setEmail] = useState("test");
     const [password, setPassword] = useState("test");
@@ -33,7 +35,7 @@ export default function Login() {
 
                 <button
                     onClick={() => {
-                        fetch("/api/login", {
+                        fetch(`${basePath}/api/login`, {
                             method: "POST",
                             body: JSON.stringify({ email, password }),
                         })
@@ -45,7 +47,7 @@ export default function Login() {
                                 return;
                             }
                             document.cookie = `token=${ele.token}`;
-                            location.href = "/private";
+                            location.href = `${basePath}/private`;
                         })
                         .catch(() => {
                             alert("User not found or password incorrect");

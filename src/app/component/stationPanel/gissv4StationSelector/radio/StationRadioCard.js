@@ -3,6 +3,8 @@ import { Check, Map, CalendarRange, Ruler } from "lucide-react";
 import styles from "./StationRadioCard.module.css"; // Your CSS module
 import { setMeanTemp } from "@/app/lib/slice/meanTempSlicer";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function StationRadioCard({ stations4V, token, dispatch, gissV2Metadata }) {
   // A function to handle station selection
 
@@ -15,7 +17,7 @@ export function StationRadioCard({ stations4V, token, dispatch, gissV2Metadata }
    */
   const handleStationSelect = (ele, i) => {
     console.log(ele);
-    fetch("/api/private/nasa/v4Data", {
+    fetch(`${basePath}/api/private/nasa/v4Data`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

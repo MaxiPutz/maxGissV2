@@ -8,13 +8,12 @@ export default function Home() {
 
   return (
     <div>
-        <nav className="nav">
-          <a href={`${basePath}/`} className="nav-link active">Home</a>
-            <a href={`${basePath}/register`} className="nav-link ">Register</a>
-        </nav>
-        <div>
-          <Login></Login>
-        </div>
+      <nav className="nav">
+        <Link href={`/`} className="nav-link active">Home</Link>
+        <Link href={`/register`} className="nav-link ">Register</Link> </nav>
+      <div>
+        <Login></Login>
+      </div>
     </div>
   );
 }
